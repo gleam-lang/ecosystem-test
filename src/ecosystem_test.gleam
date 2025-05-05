@@ -19,6 +19,7 @@ import tom
 const oldest = 1_709_568_875
 
 pub fn main() -> Nil {
+  io.println("packages list")
   let assert Ok(token) = envoy.get("GITHUB_TOKEN")
   let assert Ok(request) = request.to("https://packages.gleam.run/api/packages")
   let assert Ok(response) = httpc.send(request)
@@ -29,8 +30,7 @@ pub fn main() -> Nil {
     )
   let releases =
     packages
-    |> list.filter_map(get_releases(_, token))
-    |> list.flatten
+    |> list.flat_map(get_releases(_, token))
 
   io.println("")
 
@@ -54,25 +54,45 @@ pub fn main() -> Nil {
     cell_color: function.identity,
   )
   |> gtabler.print_table(["", "Package", "Version", "Downloads"], rows)
-  |> io.println
+  // |> io.println
 
   Nil
 }
 
-fn get_releases(
-  package: ApiPackage,
-  token: String,
-) -> Result(List(Release), Nil) {
-  let ApiPackage(name:, repository:, updated_at: _) = package
+fn get_tags(package: ApiPackage, token: String) -> List(ApiTag) {
+  case package.repository {
+    option.Some("https://github.com/" <> github) -> {
+      // TODO: follow redirects
+      let assert Ok(request) =
+        request.to("https://api.github.com/repos/" <> github <> "/tags")
+      let request =
+        request
+        |> request.set_header("authorization", "Bearer " <> token)
+        |> request.set_header("x-github-api-version", "2022-11-28")
 
-  use github <- result.try(case repository {
-    option.Some("https://github.com/" <> github) -> Ok(github)
-    option.Some(_) | option.None -> Error(Nil)
-  })
+      io.println("github tags")
+      let assert Ok(response) = httpc.send(request)
 
+      case response.status {
+        200 -> {
+          let assert Ok(tags) =
+            json.parse(response.body, decode.list(api_tag_decoder()))
+          tags
+        }
+        403 -> panic as "rate limited"
+        _ -> []
+      }
+    }
+    option.Some(_) | option.None -> []
+  }
+}
+
+fn get_releases(package: ApiPackage, token: String) -> List(Release) {
+  let ApiPackage(name:, repository: _, updated_at: _) = package
   let assert Ok(_) =
     simplifile.create_directory_all("packages/" <> package.name)
 
+  io.println("packages endpoint")
   let assert Ok(request) =
     request.to("https://packages.gleam.run/api/packages/" <> name)
 
@@ -99,40 +119,24 @@ fn get_releases(
     })
     |> result.partition
 
-  // If there's no missing releases there's nothing more to do
   case missing_releases {
-    [] -> Ok(releases)
+    // If there's no missing releases there's nothing more to do
+    [] -> releases
     _ -> {
-      // TODO: follow redirects
-      let assert Ok(request) =
-        request.to("https://api.github.com/repos/" <> github <> "/tags")
-      let request =
-        request
-        |> request.set_header("authorization", "Bearer " <> token)
-        |> request.set_header("x-github-api-version", "2022-11-28")
-
-      let assert Ok(response) = httpc.send(request)
-
-      use _ <- result.try(case response.status {
-        200 -> Ok(Nil)
-        403 -> panic as "rate limited"
-        _ -> Error(Nil)
-      })
-
-      let assert Ok(tags) =
-        json.parse(response.body, decode.list(api_tag_decoder()))
+      let tags = get_tags(package, token)
 
       let releases =
         missing_releases
         |> list.filter_map(fn(r) {
-          let result = list.find(tags, fn(t) { t.name == "v" <> r.version })
-          use tag <- result.try(result)
-          let result = determine_support(package.name, r.version)
-          use #(erlang, javascript) <- result.try(result)
+          let sha = case list.find(tags, fn(t) { t.name == "v" <> r.version }) {
+            Ok(tag) -> option.Some(tag.sha)
+            Error(_) -> option.None
+          }
+          let #(erlang, javascript) = determine_support(package.name, r.version)
           Ok(Release(
             package: package.name,
             version: r.version,
-            sha: tag.sha,
+            sha:,
             downloads: r.downloads,
             erlang:,
             javascript:,
@@ -141,12 +145,12 @@ fn get_releases(
         |> list.map(fn(release) {
           let path = cache_path(release.package, release.version)
           let assert Ok(_) = simplifile.write(path, release_to_toml(release))
-          io.println(".")
+          io.print(".")
           release
         })
         |> list.append(releases)
 
-      Ok(releases)
+      releases
     }
   }
 }
@@ -169,7 +173,10 @@ fn toml_to_release(
 ) -> Result(Release, Nil) {
   use toml <- result.try(tom.parse(toml) |> result.replace_error(Nil))
   {
-    use sha <- result.try(tom.get_string(toml, ["sha"]))
+    let sha = case tom.get_string(toml, ["sha"]) {
+      Ok(sha) -> option.Some(sha)
+      Error(_) -> option.None
+    }
     use erlang <- result.try(tom.get_bool(toml, ["erlang"]))
     use javascript <- result.try(tom.get_bool(toml, ["javascript"]))
     use downloads <- result.try(tom.get_int(toml, ["downloads"]))
@@ -185,49 +192,51 @@ fn release_to_toml(release: Release) -> String {
       False -> "false"
     }
   }
-  "sha = \"" <> release.sha <> "\"
-erlang = " <> bool(release.erlang) <> "
+  let toml = case release.sha {
+    option.Some(sha) -> "sha = \"" <> sha <> "\"\n"
+    option.None -> ""
+  }
+
+  toml <> "erlang = " <> bool(release.erlang) <> "
 javascript = " <> bool(release.javascript) <> "
 downloads = " <> int.to_string(release.downloads) <> "
 "
 }
 
-fn determine_support(
-  name: String,
-  version: String,
-) -> Result(#(Bool, Bool), Nil) {
+fn determine_support(name: String, version: String) -> #(Bool, Bool) {
+  io.println("hexdocs")
   let url =
     "https://hexdocs.pm/" <> name <> "/" <> version <> "/package-interface.json"
   let assert Ok(request) = request.to(url)
   let assert Ok(response) = httpc.send(request)
 
-  use _ <- result.try(case response.status {
-    200 -> Ok(Nil)
+  case response.status {
+    200 -> {
+      let assert Ok(interface) =
+        json.parse(response.body, package_interface.decoder())
+
+      let functions =
+        interface.modules
+        |> dict.values
+        |> list.flat_map(fn(m) { dict.values(m.functions) })
+
+      let erlang =
+        list.all(functions, fn(f) { f.implementations.can_run_on_erlang })
+      let javascript =
+        list.all(functions, fn(f) { f.implementations.can_run_on_javascript })
+      #(erlang, javascript)
+    }
     // This package is lacking a package interface
-    404 -> Error(Nil)
+    404 -> #(False, False)
     _ -> panic as { name <> "@" <> version <> " interface " <> response.body }
-  })
-
-  let assert Ok(interface) =
-    json.parse(response.body, package_interface.decoder())
-
-  let functions =
-    interface.modules
-    |> dict.values
-    |> list.flat_map(fn(m) { dict.values(m.functions) })
-
-  let erlang =
-    list.all(functions, fn(f) { f.implementations.can_run_on_erlang })
-  let javascript =
-    list.all(functions, fn(f) { f.implementations.can_run_on_javascript })
-  Ok(#(erlang, javascript))
+  }
 }
 
 type Release {
   Release(
     package: String,
     version: String,
-    sha: String,
+    sha: Option(String),
     downloads: Int,
     erlang: Bool,
     javascript: Bool,
