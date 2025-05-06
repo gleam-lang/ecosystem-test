@@ -88,7 +88,7 @@ fn override(release: Release) -> Release {
     | Release(package: "based_sqlite", version: "2." <> _, ..)
     | Release(package: "sqlight", version: "0." <> _, ..)
     | Release(package: "cactus", version: "1.3.3", ..)
-    | Release(package: "party", version: "1.0.3", ..)
+    | Release(package: "party", version: "1" <> _, ..)
     | Release(package: "clip", version: "0.6.1", ..)
     | Release(package: "qcheck", version: "0" <> _, ..)
     | Release(package: "humanise", version: "1.0.2", ..)

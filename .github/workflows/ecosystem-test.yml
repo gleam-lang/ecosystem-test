@@ -3003,28 +3003,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - run: gleam test --target js
 
-  party-1_0_5:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: 'RyanBrewer317/party'
-          ref: '46b617c65535809cd4a6a9bf2e64129a8557602a'
-      - uses: erlef/setup-beam@v1
-        with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
-          rebar3-version: '3'
-          elixir-version: '1'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18.x'
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-      - run: gleam test --target js
-
   given-5_0_2:
     runs-on: ubuntu-latest
     steps:
@@ -4125,28 +4103,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - run: gleam test --target js
 
-  party-1_0_6:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: 'RyanBrewer317/party'
-          ref: '7087b7b6b8baad6309600502bdfd748736c1d0c6'
-      - uses: erlef/setup-beam@v1
-        with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
-          rebar3-version: '3'
-          elixir-version: '1'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18.x'
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-      - run: gleam test --target js
-
   qs-0_6_0:
     runs-on: ubuntu-latest
     steps:
@@ -4829,28 +4785,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - run: gleam test --target js
 
-  party-1_0_4:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: 'RyanBrewer317/party'
-          ref: '5a98957c6aceb920afe5426293bb5b146bfb8bef'
-      - uses: erlef/setup-beam@v1
-        with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
-          rebar3-version: '3'
-          elixir-version: '1'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18.x'
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-      - run: gleam test --target js
-
   gleam_time-1_0_0-rc1:
     runs-on: ubuntu-latest
     steps:
@@ -4924,6 +4858,72 @@ jobs:
         with:
           repository: 'Enderchief/glen_node'
           ref: '45c6c4d138f0ec681038848613b71a37289e3d16'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+      - run: gleam test --target js
+
+  cake_sqlight-1_0_3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'inoas/gleam-cake-sqlight'
+          ref: '8a84cc8a2d9f513fc380e7fd88e3c4a842afaa30'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+      - run: gleam test --target js
+
+  html_lustre_converter-1_1_0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/html-lustre-converter'
+          ref: 'f65e660bfb110b62a8e2877e47fac1a08d6d1ce1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+      - run: gleam test --target js
+
+  gu-2_3_0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'salif/gu'
+          ref: '568bef3f3d8042307d9fd1e4037f952bd007869d'
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '27'
