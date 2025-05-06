@@ -95,8 +95,11 @@ jobs:
     list.fold(releases, workflow, fn(workflow, release) {
       case release.github, release.sha {
         option.Some(github), option.Some(sha) -> {
+          let name =
+            string.replace(release.package <> "-" <> release.version, ".", "_")
+
           let workflow = workflow <> "
-  " <> release.package <> "-" <> release.version <> ":
+  " <> name <> ":
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

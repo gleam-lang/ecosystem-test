@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  ranger-1.2.0:
+  ranger-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.40.0:
+  gleam_stdlib-0_40_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +41,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleeunit-1.3.0:
+  gleeunit-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -56,7 +56,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  platform-1.0.0:
+  platform-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_yielder-1.1.0:
+  gleam_yielder-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -86,7 +86,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_http-3.7.2:
+  gleam_http-3_7_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -101,7 +101,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  envoy-1.0.2:
+  envoy-1_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -116,7 +116,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_json-2.3.0:
+  gleam_json-2_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -131,7 +131,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  directories-1.1.0:
+  directories-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -146,7 +146,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  filepath-1.1.0:
+  filepath-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -161,7 +161,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  marceau-1.3.0:
+  marceau-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -176,7 +176,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.39.0:
+  gleam_stdlib-0_39_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -191,7 +191,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ranger-1.4.0:
+  ranger-1_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -206,7 +206,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  birl-1.8.0:
+  birl-1_8_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -221,7 +221,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.54.0:
+  gleam_stdlib-0_54_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -236,7 +236,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-0.13.0:
+  gleam_javascript-0_13_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -251,7 +251,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  term_size-1.0.1:
+  term_size-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -266,7 +266,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_regexp-1.1.0:
+  gleam_regexp-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -281,7 +281,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  marceau-1.2.0:
+  marceau-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -296,7 +296,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_regexp-1.0.0:
+  gleam_regexp-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -311,7 +311,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glam-2.0.1:
+  glam-2_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -326,7 +326,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-1.0.0:
+  gleam_javascript-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -341,7 +341,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  modem-2.0.1:
+  modem-2_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -356,7 +356,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_community_colour-1.4.1:
+  gleam_community_colour-1_4_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -371,7 +371,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_http-4.0.0:
+  gleam_http-4_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -386,7 +386,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_fetch-1.1.1:
+  gleam_fetch-1_1_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -401,7 +401,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.51.0:
+  gleam_stdlib-0_51_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -416,7 +416,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  repeatedly-2.1.2:
+  repeatedly-2_1_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -431,7 +431,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.57.0:
+  gleam_stdlib-0_57_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -446,7 +446,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.52.0:
+  gleam_stdlib-0_52_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -461,7 +461,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  prng-4.0.1:
+  prng-4_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -476,7 +476,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_deque-1.0.0:
+  gleam_deque-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -491,7 +491,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.58.0:
+  gleam_stdlib-0_58_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -506,7 +506,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.55.0:
+  gleam_stdlib-0_55_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -521,7 +521,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  filepath-1.1.1:
+  filepath-1_1_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -536,7 +536,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.59.0:
+  gleam_stdlib-0_59_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -551,7 +551,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_time-1.0.0:
+  gleam_time-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -566,7 +566,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  simplifile-2.2.1:
+  simplifile-2_2_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -581,7 +581,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_community_ansi-1.4.2:
+  gleam_community_ansi-1_4_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -596,7 +596,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_fetch-1.1.0:
+  gleam_fetch-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -611,7 +611,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_json-2.2.0:
+  gleam_json-2_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -626,7 +626,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.45.0:
+  gleam_stdlib-0_45_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -641,7 +641,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glearray-0.2.2:
+  glearray-0_2_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -656,7 +656,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  filepath-1.1.2:
+  filepath-1_1_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -671,7 +671,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-0.11.0:
+  glance-0_11_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -686,7 +686,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  grille_pain-1.1.0:
+  grille_pain-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -701,7 +701,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_fetch-1.0.1:
+  gleam_fetch-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -716,7 +716,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-0.12.0:
+  gleam_javascript-0_12_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -731,7 +731,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.41.0:
+  gleam_stdlib-0_41_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -746,7 +746,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_regexp-1.1.1:
+  gleam_regexp-1_1_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -761,7 +761,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_crypto-1.5.0:
+  gleam_crypto-1_5_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -776,7 +776,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ranger-1.3.0:
+  ranger-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -791,7 +791,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_json-2.1.0:
+  gleam_json-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -806,7 +806,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glearray-2.0.0:
+  glearray-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -821,7 +821,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glint-1.2.0:
+  glint-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -836,7 +836,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.6:
+  plinth-0_5_6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -851,7 +851,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.0:
+  plinth-0_5_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -866,7 +866,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_http-3.7.1:
+  gleam_http-3_7_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -881,7 +881,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_community_ansi-1.4.3:
+  gleam_community_ansi-1_4_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -896,7 +896,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glint-1.0.1:
+  glint-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -911,7 +911,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  grille_pain-1.1.2:
+  grille_pain-1_1_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -926,7 +926,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.47.0:
+  gleam_stdlib-0_47_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -941,7 +941,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glearray-1.0.0:
+  glearray-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -956,7 +956,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.43.0:
+  gleam_stdlib-0_43_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -971,7 +971,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  palabres-0.2.0:
+  palabres-0_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -986,7 +986,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cors_builder-2.0.3:
+  cors_builder-2_0_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1001,7 +1001,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cors_builder-2.0.2:
+  cors_builder-2_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1016,7 +1016,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.12:
+  plinth-0_4_12:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1031,7 +1031,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_community_colour-2.0.0:
+  gleam_community_colour-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1046,7 +1046,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cors_builder-2.0.4:
+  cors_builder-2_0_4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1061,7 +1061,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.53.0:
+  gleam_stdlib-0_53_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1076,7 +1076,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glint-1.1.1:
+  glint-1_1_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1091,7 +1091,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleeunit-1.3.1:
+  gleeunit-1_3_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1106,7 +1106,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-0.11.0:
+  gleam_javascript-0_11_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1121,7 +1121,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.56.0:
+  gleam_stdlib-0_56_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1136,7 +1136,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  palabres-0.4.1:
+  palabres-0_4_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1151,7 +1151,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  palabres_wisp-0.4.0:
+  palabres_wisp-0_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1166,7 +1166,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glam-2.0.2:
+  glam-2_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1181,7 +1181,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  eval-1.0.0:
+  eval-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1196,7 +1196,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glint-1.1.0:
+  glint-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1211,7 +1211,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  non_empty_list-2.1.0:
+  non_empty_list-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1226,7 +1226,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleither-2.1.0:
+  gleither-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1241,7 +1241,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glint-1.2.1:
+  glint-1_2_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1256,7 +1256,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gsv-3.0.2:
+  gsv-3_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1271,7 +1271,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glexer-2.1.0:
+  glexer-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1286,7 +1286,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  aws4_request-1.2.2:
+  aws4_request-1_2_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1301,7 +1301,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_time-1.0.0-rc2:
+  gleam_time-1_0_0-rc2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1316,7 +1316,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  grille_pain-1.1.3:
+  grille_pain-1_1_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1331,7 +1331,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glexer-2.2.1:
+  glexer-2_2_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1346,7 +1346,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  json_blueprint-1.5.2:
+  json_blueprint-1_5_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1361,7 +1361,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  spinner-1.2.0:
+  spinner-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1376,7 +1376,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  tote-1.0.2:
+  tote-1_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1391,7 +1391,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  sqlight-0.9.1:
+  sqlight-0_9_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1406,7 +1406,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_fetch-1.3.0:
+  gleam_fetch-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1421,7 +1421,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  delay-1.2.0:
+  delay-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1436,7 +1436,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  directories-1.2.0:
+  directories-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1451,7 +1451,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  clip-1.0.0:
+  clip-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1466,7 +1466,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.0.0:
+  ieee_float-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1481,7 +1481,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.15:
+  plinth-0_4_15:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1496,7 +1496,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.7:
+  plinth-0_5_7:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1511,7 +1511,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  shellout-1.7.0:
+  shellout-1_7_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1526,7 +1526,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-2.0.0:
+  glance-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1541,7 +1541,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_time-1.1.0:
+  gleam_time-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1556,7 +1556,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-1.0.0:
+  glance-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1571,7 +1571,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_time-1.2.0:
+  gleam_time-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1586,7 +1586,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-2.0.1:
+  glance-2_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1601,7 +1601,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-3.0.0:
+  glance-3_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1616,7 +1616,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  spinner-1.3.0:
+  spinner-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1631,7 +1631,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_hexpm-2.0.0:
+  gleam_hexpm-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1646,7 +1646,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  spinner-1.3.1:
+  spinner-1_3_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1661,7 +1661,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.49.0:
+  gleam_stdlib-0_49_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1676,7 +1676,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_fetch-1.2.0:
+  gleam_fetch-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1691,7 +1691,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.44.0:
+  gleam_stdlib-0_44_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1706,7 +1706,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  file_streams-1.5.0:
+  file_streams-1_5_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1721,7 +1721,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.5:
+  plinth-0_5_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1736,7 +1736,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gxyz-0.3.0:
+  gxyz-0_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1751,7 +1751,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  sqlight-1.0.1:
+  sqlight-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1766,7 +1766,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.46.0:
+  gleam_stdlib-0_46_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1781,7 +1781,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  nakai-1.0.0:
+  nakai-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1796,7 +1796,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glexer-2.0.0:
+  glexer-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1811,7 +1811,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.3.0:
+  ieee_float-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1826,7 +1826,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  conversation-2.0.1:
+  conversation-2_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1841,7 +1841,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.48.0:
+  gleam_stdlib-0_48_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1856,7 +1856,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_stdlib-0.42.0:
+  gleam_stdlib-0_42_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1871,7 +1871,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleamy_lights-2.3.0:
+  gleamy_lights-2_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1886,7 +1886,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  tardis-0.1.0:
+  tardis-0_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1901,7 +1901,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cake-2.1.0:
+  cake-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1916,7 +1916,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  worm-1.0.4:
+  worm-1_0_4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1931,7 +1931,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleroglero-1.1.0:
+  gleroglero-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1946,7 +1946,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gtempo-5.1.2:
+  gtempo-5_1_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1961,7 +1961,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  go_over-2.2.1:
+  go_over-2_2_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1976,7 +1976,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gxyz-0.5.1:
+  gxyz-0_5_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -1991,7 +1991,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  nakai-1.1.1:
+  nakai-1_1_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2006,7 +2006,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.0.3:
+  ieee_float-1_0_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2021,7 +2021,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  modem-1.1.0:
+  modem-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2036,7 +2036,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gwt-2.0.0:
+  gwt-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2051,7 +2051,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  modem-2.0.0:
+  modem-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2066,7 +2066,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  file_streams-1.2.2:
+  file_streams-1_2_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2081,7 +2081,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cactus-1.3.3:
+  cactus-1_3_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2096,7 +2096,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  javascript_dom_parser-1.0.0:
+  javascript_dom_parser-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2111,7 +2111,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  modem-2.0.2:
+  modem-2_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2126,7 +2126,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.9:
+  plinth-0_5_9:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2141,7 +2141,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.9:
+  plinth-0_4_9:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2156,7 +2156,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.0.2:
+  ieee_float-1_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2171,7 +2171,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.14:
+  plinth-0_4_14:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2186,7 +2186,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  worm-1.0.5:
+  worm-1_0_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2201,7 +2201,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  jot-1.0.1:
+  jot-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2216,7 +2216,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  sqlight-1.0.0:
+  sqlight-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2231,7 +2231,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-0.9.0:
+  gleam_javascript-0_9_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2246,7 +2246,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  xmlm-1.0.0:
+  xmlm-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2261,7 +2261,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  file_streams-1.3.0:
+  file_streams-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2276,7 +2276,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.1:
+  plinth-0_5_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2291,7 +2291,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cactus-1.1.0:
+  cactus-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2306,7 +2306,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_javascript-0.10.0:
+  gleam_javascript-0_10_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2321,7 +2321,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.5:
+  plinth-0_4_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2336,7 +2336,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glance-1.1.0:
+  glance-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2351,7 +2351,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gtempo-5.0.2:
+  gtempo-5_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2366,7 +2366,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cactus-1.2.0:
+  cactus-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2381,7 +2381,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glenv-0.4.0:
+  glenv-0_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2396,7 +2396,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.1.0:
+  ieee_float-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2411,7 +2411,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  chomp-0.4.0:
+  chomp-0_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2426,7 +2426,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  bungibindies-1.1.4:
+  bungibindies-1_1_4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2441,7 +2441,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.10:
+  plinth-0_4_10:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2456,7 +2456,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glearray-2.1.0:
+  glearray-2_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2471,7 +2471,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  clad-1.1.0:
+  clad-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2486,7 +2486,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cactus-1.3.0:
+  cactus-1_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2501,7 +2501,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  party-1.0.5:
+  party-1_0_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2516,7 +2516,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  given-5.0.2:
+  given-5_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2531,7 +2531,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  palabres-0.3.0:
+  palabres-0_3_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2546,7 +2546,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  toy-0.5.1:
+  toy-0_5_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2561,7 +2561,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  nakai-0.11.0:
+  nakai-0_11_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2576,7 +2576,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleamy_structures-1.0.0:
+  gleamy_structures-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2591,7 +2591,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  globlin-2.0.3:
+  globlin-2_0_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2606,7 +2606,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleamy_structures-1.1.0:
+  gleamy_structures-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2621,7 +2621,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  file_streams-1.2.3:
+  file_streams-1_2_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2636,7 +2636,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  pprint-1.0.5:
+  pprint-1_0_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2651,7 +2651,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.5.4:
+  plinth-0_5_4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2666,7 +2666,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  clip-0.6.2:
+  clip-0_6_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2681,7 +2681,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.7:
+  plinth-0_4_7:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2696,7 +2696,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  juno-1.4.0:
+  juno-1_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2711,7 +2711,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  bigdecimal-1.1.0:
+  bigdecimal-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2726,7 +2726,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gxyz-0.4.0:
+  gxyz-0_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2741,7 +2741,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  dotenv_gleam-1.0.7:
+  dotenv_gleam-1_0_7:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2756,7 +2756,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.8:
+  plinth-0_4_8:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2771,7 +2771,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  xmb-1.1.0:
+  xmb-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2786,7 +2786,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  javascript_mutable_reference-1.0.0:
+  javascript_mutable_reference-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2801,7 +2801,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  lucide_lustre-2.0.0:
+  lucide_lustre-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2816,7 +2816,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gtempo-6.1.2:
+  gtempo-6_1_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2831,7 +2831,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  storail-3.0.0:
+  storail-3_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2846,7 +2846,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glen-2.2.2:
+  glen-2_2_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2861,7 +2861,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  clip-0.6.1:
+  clip-0_6_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2876,7 +2876,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  splitter-1.0.0:
+  splitter-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2891,7 +2891,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleamgen-0.3.6:
+  gleamgen-0_3_6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2906,7 +2906,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  non_empty_list-2.0.0:
+  non_empty_list-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2921,7 +2921,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  qcheck-0.0.6:
+  qcheck-0_0_6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2936,7 +2936,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  humanise-1.0.2:
+  humanise-1_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2951,7 +2951,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  given-5.0.3:
+  given-5_0_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2966,7 +2966,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  bucket-1.2.0:
+  bucket-1_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2981,7 +2981,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gzlib-1.0.1:
+  gzlib-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -2996,7 +2996,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  esgleam-0.8.0:
+  esgleam-0_8_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3011,7 +3011,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleither-2.0.0:
+  gleither-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3026,7 +3026,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  qcheck-1.0.0:
+  qcheck-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3041,7 +3041,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  webls-1.5.1:
+  webls-1_5_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3056,7 +3056,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  dotenv_gleam-2.0.0:
+  dotenv_gleam-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3071,7 +3071,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleamy_bench-0.6.0:
+  gleamy_bench-0_6_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3086,7 +3086,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  plinth-0.4.6:
+  plinth-0_4_6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3101,7 +3101,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gleam_community_maths-2.0.0:
+  gleam_community_maths-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3116,7 +3116,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  globlin_fs-2.0.0:
+  globlin_fs-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3131,7 +3131,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gluid-1.1.0:
+  gluid-1_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3146,7 +3146,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  input-1.0.0:
+  input-1_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3161,7 +3161,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  ieee_float-1.0.1:
+  ieee_float-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3176,7 +3176,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  party-1.0.3:
+  party-1_0_3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3191,7 +3191,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gtempo-7.1.0:
+  gtempo-7_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3206,7 +3206,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  html_lustre_converter-1.4.0:
+  html_lustre_converter-1_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3221,7 +3221,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  globlin-2.0.2:
+  globlin-2_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3236,7 +3236,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  based_sqlite-3.0.0:
+  based_sqlite-3_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3251,7 +3251,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  shine_tree-0.0.6:
+  shine_tree-0_0_6:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3266,7 +3266,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  cx-1.0.5:
+  cx-1_0_5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3281,7 +3281,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  gtempo-6.2.0:
+  gtempo-6_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3296,7 +3296,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  qcheck-0.0.8:
+  qcheck-0_0_8:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3311,7 +3311,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  convert-1.0.1:
+  convert-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3326,7 +3326,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  go_over-3.0.1:
+  go_over-3_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3341,7 +3341,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  efetch-2.0.1:
+  efetch-2_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3356,7 +3356,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  go_over-2.4.0:
+  go_over-2_4_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3371,7 +3371,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  tulip-0.1.0:
+  tulip-0_1_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3386,7 +3386,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  formal-2.2.0:
+  formal-2_2_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3401,7 +3401,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  based-2.0.0:
+  based-2_0_0:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3416,7 +3416,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  grille_pain-1.0.1:
+  grille_pain-1_0_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -3431,7 +3431,7 @@ jobs:
           elixir-version: '1'
       - run: gleam test --target js
 
-  glen-2.2.1:
+  glen-2_2_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
