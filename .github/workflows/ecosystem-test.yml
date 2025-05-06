@@ -1,0 +1,3447 @@
+
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      gleam-version:
+        description: 'Gleam version'
+        required: true
+        default: '1.10.0'
+
+jobs:
+
+  ranger-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'massivefermion/ranger'
+          ref: '23b6678d8c938aba60308f63b7176d19725a7227'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.40.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '341a71049ad765f8788af497969efbb94aba0bab'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleeunit-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/gleeunit'
+          ref: 'b4e43a4dedad9f7d72d470f9bdd28413fbab51eb'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  platform-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ditherwither/platform'
+          ref: '626186280303019bed34568a9536957ffbb64f55'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_yielder-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/yielder'
+          ref: 'da4a909be4502ca103eb7d3ffcec4eb19a2a1010'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_http-3.7.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/http'
+          ref: '7be642c1f95a0e1e6a317153b01dd9229bd5dec4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  envoy-1.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/envoy'
+          ref: '37de8ee4fe7346f8c681fbbeda8d59dc12dcf036'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_json-2.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/json'
+          ref: 'a31192b454ab259bf2cf0041756ee85e7063626e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  directories-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ditherwither/directories'
+          ref: 'b083c0be62c7e4d6bbaad3882c54334bb5cd4e66'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  filepath-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/filepath'
+          ref: '5eac5a71e3e61bd3d54fa8f5739d4b90158f5d00'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  marceau-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/marceau'
+          ref: 'b00c8b94a72f4189bdcba92c35677dd051de1b8f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.39.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '7aba73d83c42763e1854dd4a0beb0f17fb8b4019'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ranger-1.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'massivefermion/ranger'
+          ref: '61f975feb570f4cb1eef956a63f4fce036f139bf'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  birl-1.8.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'massivefermion/birl'
+          ref: '6bbd95b695e4fd6480a20618d32b69f4b56e44c6'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.54.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'd092588b525ec9f646bb80e1ad535abcff8bdc75'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-0.13.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: '58e789027d037ac1472a90c7ec46bb9dd8874989'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  term_size-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/term_size'
+          ref: 'b1147ccad38ac370746c07961a964cb96d19e3a1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_regexp-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/regexp'
+          ref: 'cbefa95865ccf06613cfede1369ecc11702d300b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  marceau-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/marceau'
+          ref: '2a09507e6cacbdc8127c27cdd88f238fd348870d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_regexp-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/regexp'
+          ref: '4b0de739762e0afffd32e0fe7277f227d9cba057'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glam-2.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/glam'
+          ref: '2ec12fb76d5b2141d48eab42cd14174abfe861f8'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: 'cac3386eb2c390c6762f5bdbd1135b3650826b35'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  modem-2.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'hayleigh-dot-dev/modem'
+          ref: '8b215de8843fd1ded191a2eb0b50c84a71ef61ca'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_community_colour-1.4.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-community/colour'
+          ref: '5406e7e29ae2d7a751143ce686747d28e793e71e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_http-4.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/http'
+          ref: '6ef2e49363bb8518139fce923c49f1eae816127c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_fetch-1.1.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/fetch'
+          ref: '7355a7a3d3163908fd1699ad09475882bcebb254'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.51.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '928f8fb7f6d8c46ebb42c0f71b654afb19a1607e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  repeatedly-2.1.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/repeatedly'
+          ref: '47cbd0933df2c1a201f47820d62317991341b7e3'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.57.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '367ccaad18d4d303c433da90682c5b1b14d1714e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.52.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '330a3cc3c7bad3ba1171a5aa11d5451a6ee18278'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  prng-4.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/prng'
+          ref: '48c276b8c7be319bca8a5330de1c7fd4ec9b953c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_deque-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/deque'
+          ref: 'c55e9baff094d67a2e78e45e1f32dd4c5bd696bc'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.58.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'e20cf17a68d3a24bab934d2def8a2c77a8f4f1f6'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.55.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '2af06912a587b0411111d51660b98f7f57d6afdb'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  filepath-1.1.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/filepath'
+          ref: 'bfc0741eae6198fe0902bb2ee409bacb0da89709'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.59.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '2933eac6f06981dc3091561760761f2f666d0e74'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_time-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/time'
+          ref: 'd4fbd88e985e7c4ba36f3ac64d6804125046bd65'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  simplifile-2.2.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bcpeinhardt/simplifile'
+          ref: '99bfaa51b1f7c840d3f6376b9fb3933ba3a0945a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_community_ansi-1.4.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-community/ansi'
+          ref: 'a8f17d83935f9478885d93000928ae1c0eabf15f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_fetch-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/fetch'
+          ref: '7bf4b3e1ad1486f4a56d1196b2b4ed98d1fb0787'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_json-2.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/json'
+          ref: 'fdc7e573640b1b87af493d7e863dc829106d2772'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.45.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'c339a9788fc514cad8cbd6b1e9b04b32d9e3e967'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glearray-0.2.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lunagl/glearray'
+          ref: '28b26a749cf79455a8289fcbf96c7f4912b1a72c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  filepath-1.1.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/filepath'
+          ref: '21131e233ba8c96a6f1182d6c0c064d90c86f460'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-0.11.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: 'b77e53dde0b6e9042635c8455e57f0e7b89fe303'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  grille_pain-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/grille-pain'
+          ref: '49560bc51b7d458844a1d7943f5a41320b53feb5'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_fetch-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/fetch'
+          ref: '61bc59154144480c8af9bd4eb1b6e6b1516c3151'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-0.12.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: '41e09e934ed5e57e937c5ce263454c4d9c05429f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.41.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'b617da1d359ce2331f5410c456302e5966e00489'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_regexp-1.1.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/regexp'
+          ref: '4764177ecd1a818f4eba496d0a2af97f3c04a6b2'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_crypto-1.5.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/crypto'
+          ref: 'cad15517fe3ffc89ba9df496f96abcb250d9ec71'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ranger-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'massivefermion/ranger'
+          ref: '4974a8fa0ad9862e07961adc5eea91e21630becc'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_json-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/json'
+          ref: '7cc6ab2e4a2914f37e27e947f73bf812b1606713'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glearray-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lunagl/glearray'
+          ref: 'bba89fc90b84448227bbb482b97ca5ba93f75b86'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glint-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'TanklesXL/glint'
+          ref: 'e15ca5c57d6ece79cd1d2a7c083c4ab95d8ce836'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '7db0577a453f5a3376334ed37d2b0d1dce726b46'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '34235f1f1c4f5082828ce34edac6c8b9d2bb98de'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_http-3.7.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/http'
+          ref: '9fa61f8d82b30eead9f334387b9961198becd1a2'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_community_ansi-1.4.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-community/ansi'
+          ref: '6cff58298f8352d7691a66550a4dde387534cd0a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glint-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'TanklesXL/glint'
+          ref: '6038c438b2d355735e3e9432fad3f4945a397817'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  grille_pain-1.1.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/grille-pain'
+          ref: '607fb6c3d8b8e9b7218d5ce171dcae93c0d31750'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.47.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'f15d41b5087d286b4862e2d5dea5382961daef55'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glearray-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lunagl/glearray'
+          ref: '85535b41ede9b4e6610a2eb49fbf3c0c62deb386'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.43.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '168397ec512edf2efbb44f0d01ffb914c6398f5c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  palabres-0.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/palabres'
+          ref: 'ea173016bab56c3774830368287319c502c5951b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cors_builder-2.0.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/cors-builder'
+          ref: 'a225b288006e715a541479b9371c257fea508e76'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cors_builder-2.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/cors-builder'
+          ref: 'd51cf6cc304d5a942eb7576d454db89eca760566'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.12:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '491ec992676174a91fbfb8f1651f11202401361d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_community_colour-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-community/colour'
+          ref: '0295d850e376435c20344dac58d056d16b28446d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cors_builder-2.0.4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/cors-builder'
+          ref: 'b76a1dc4d4972464ef3fbe39e241dee4380b46de'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.53.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '3d7b58ce2955ff192743535b879744f444abef7c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glint-1.1.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'TanklesXL/glint'
+          ref: 'af68eea62b0001dee8a0ff34bf8be0f2e3f99de4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleeunit-1.3.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/gleeunit'
+          ref: '99b5da646d0a19d7655611477300f787e57213b4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-0.11.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: 'fb6330637206c2245b26c739539e6e6904b83f41'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.56.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '5db138e7cc5ab05cb981362efcd92a7fd67df9d2'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  palabres-0.4.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/palabres'
+          ref: '2ac87e6d22db29ef8d2776504fead571e22f36ad'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  palabres_wisp-0.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/palabres'
+          ref: '4147dda33e96264b87e2cdf2497cf6b93aedf1ab'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glam-2.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/glam'
+          ref: 'dd805cdc9ee59cbb02649709f68812c3445b917f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  eval-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'hayleigh-dot-dev/gleam-eval'
+          ref: '24425b1e78d498287c1b73d8010be10a91511cb7'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glint-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'TanklesXL/glint'
+          ref: '752a1ead5f9279797da645179952061bf4631cfb'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  non_empty_list-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/non_empty_list'
+          ref: 'bc0711dc68d91c29ad04414a5e621a379511a026'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleither-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/gleither'
+          ref: '957dec8547d142bf4f8a9656eb462b976177175d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glint-1.2.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'TanklesXL/glint'
+          ref: 'b7424b049194091613e5d2dfdfc4b478996a669b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gsv-3.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bcpeinhardt/gsv'
+          ref: '104b24db07ad12b2bee6f13f71ffd641d65fc712'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glexer-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'DanielleMaywood/glexer'
+          ref: '20c60a953e10c826a32c74d1d0265f16c4e82ac5'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  aws4_request-1.2.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/aws4_request'
+          ref: '6df1652bde855502156cad9c64cbc36ab9bac474'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_time-1.0.0-rc2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/time'
+          ref: 'cef49444e73dd36bf3661933ab55409aa70a5b33'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  grille_pain-1.1.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/grille-pain'
+          ref: '4796dbbd4f12f1c446bf929338305bf03680a22d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glexer-2.2.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'DanielleMaywood/glexer'
+          ref: '247c57f89ca80d19c272cf08306b75b9b6f49b06'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  json_blueprint-1.5.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lostbean/json_blueprint'
+          ref: '1a6e37f24ebf11e415ad6a287c7e77384abdc193'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  spinner-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/spinner'
+          ref: '85b193571159e1958e15155127decbeb60cd8484'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  tote-1.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/tote'
+          ref: 'a9d1fe410339d89179cad1bdffa2f989d20cf96c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  sqlight-0.9.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/sqlight'
+          ref: '143705b8d5d3e0a95c13d61c97d9d7e37227dcc0'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_fetch-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/fetch'
+          ref: 'ddca90cbe01d107ff69768fa877a4a18f0c24a3c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  delay-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/delay'
+          ref: '2b3e3fd21cee9aa72b295e45f6fbc783963eeec1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  directories-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ditherwither/directories'
+          ref: '63edbddef876b1fcd0e541b2d6377d46a2764fa0'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  clip-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'drewolson/clip'
+          ref: '80d245c7296884efc3bd3ad5743e9e8a05624bb5'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: '301ee9add80d38b3b8144ee9c3aca8f641812bef'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.15:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '1e9d44319c11488f446bf5813352ebdd7a3212ef'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.7:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: 'f06634181be3248abcf9e84f997b37f5db671605'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  shellout-1.7.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'tynanbe/shellout'
+          ref: '841a408a2e6b8ba33f01921665c1fd67c170f593'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: 'e0127e65187a7d379077236a1f8adf5f11a9ed01'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_time-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/time'
+          ref: '9c3c3dbd2f0143956ab6f7783793a00a33ac30c4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: '6f295ee99e3eb2b0b87b55669803d252f50c29de'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_time-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/time'
+          ref: 'fa8c13938abb9ba35cb4b669931b986dae888a57'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-2.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: '20176fe4876cf836d8e2e79a3e5c7a1300bf9829'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-3.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: '07eb2d491a664ed2e5f5d66ad26166299afbbc2c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  spinner-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/spinner'
+          ref: 'c2bf4cfa18847212943b6712e121fefe5fa98c40'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_hexpm-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/hexpm'
+          ref: 'c2fa1edec4de6c135a5965aec2696f0a23b2fd86'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  spinner-1.3.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/spinner'
+          ref: '2d46270c702fef1ffae53521cb6c806f1be789ea'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.49.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '6ee4726085624e53e3a10829efc95b5e25741206'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_fetch-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/fetch'
+          ref: 'bacdee5114ad689c274cc1fd9e8cf9a43fc00609'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.44.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '8349133498dbd595b82c783d8e11d530689eeb35'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  file_streams-1.5.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/file_streams'
+          ref: 'cf487ab0d80e9548ec568da3e5df8f964e02b2b3'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: 'a6198e6fffaee5e85d8c419e1768a84aa82afeb1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gxyz-0.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/gxyz'
+          ref: '23a2636d36fb3b75862899afc68a087dccf6c12f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  sqlight-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/sqlight'
+          ref: 'b20bc28a5493bdd1766f366efc1e61a9b7ca10de'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.46.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '370a060299cc9aeca4b37c3a36ce392055599815'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  nakai-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'aslilac/nakai'
+          ref: 'dad9063b175676dc8eda2e54991ac6c64e9a874c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glexer-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'DanielleMaywood/glexer'
+          ref: 'ee4e1f12c8cd4b322526855471a2b72a1df74df6'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: 'c0a0345d6abb3c57ea8f64efe6ef9f8fd3ca09aa'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  conversation-2.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/conversation'
+          ref: '3ec9fe6a3dd20969f093762534b81cc0c0762fcd'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.48.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: 'c33b7341838d9286903c39697c82fc81f30fd437'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_stdlib-0.42.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/stdlib'
+          ref: '240cc7248a7be3cbd9a5424719f7d8727c3da988'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleamy_lights-2.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'strawmelonjuice/gleamy_lights'
+          ref: '8525eab00a229f03cb7e1adfbfd8795cb217173f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  tardis-0.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/tardis'
+          ref: '060fbe219848c898f1bea5469cfe113a3fc8f3db'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cake-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'inoas/gleam-cake'
+          ref: '6c69228ede2f422139f9b7d6aba978c1a6f734d7'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  worm-1.0.4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mscharley/gleam-worm'
+          ref: '23bf24c7b9549b023f5bff9db1bb5044954fdd0d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleroglero-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'skinkade/gleroglero'
+          ref: '6d776748678de2916457ffa06454f1c9f803796c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gtempo-5.1.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jrstrunk/tempo'
+          ref: 'd13d0c256ff7b0e93ecc412de10ea3bdfb0fe325'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  go_over-2.2.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/go-over'
+          ref: '085227d64b02572704633c90c88293105c1408bb'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gxyz-0.5.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/gxyz'
+          ref: 'ac5266916561ba5be38ee124f28971dc70b439b0'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  nakai-1.1.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'aslilac/nakai'
+          ref: '2537a4eedad71507b5f4fe6dafa3ef8195a3ee6e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.0.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: 'f8732aace2fcce9c23a3efff33d3475497cef59f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  modem-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'hayleigh-dot-dev/modem'
+          ref: '3972cee7e633ea1157e3272a064009a41ca95ad3'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gwt-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'brettkolodny/gwt'
+          ref: '2b4c1f2fdd65c9ff2455af7dd7d3f95e84370594'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  modem-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'hayleigh-dot-dev/modem'
+          ref: 'b70a8d48c19cee7ba06f26cdc080fda747521c09'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  file_streams-1.2.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/file_streams'
+          ref: '87493bcdd0402b12dcb54958b622d2574547366d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cactus-1.3.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/cactus'
+          ref: '03e74cfc481c940d9a39c320b42a39f31697f0ea'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  javascript_dom_parser-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/javascript-dom-parser'
+          ref: 'ee87df4e74aec5647a036ba34fd6761bf5c27a71'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  modem-2.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'hayleigh-dot-dev/modem'
+          ref: '46ebea816020986d1bb0458e5c90a94563770b46'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.9:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '7a6eb53fd2f9e9f042bb4915f5aee130eccd545f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.9:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '20b215dbc9cf3136a696a5da9e907b36957b62dc'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: '34125939c5bf409b55042aad41caffd9f77aa10b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.14:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '96385dd7c4fcaf9fc6473f50f3d463179dee8cec'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  worm-1.0.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mscharley/gleam-worm'
+          ref: 'cdfc552d17ad2fe87aa7607912476fe3edb17985'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  jot-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/jot'
+          ref: 'df08a4c4a1d7756b2b434b467a1bb73dc3fc85f9'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  sqlight-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/sqlight'
+          ref: '9278b8f67364414d41caae6cad056b89528d08a6'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-0.9.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: '570f06b3b711836e536ef67b78f4f19bfaaa14a9'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  xmlm-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mooreryan/gleam_xmlm'
+          ref: '06b3369b822f2669bd11c89a852b5897332a62ea'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  file_streams-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/file_streams'
+          ref: '2ee23e26480e49eb69d134b73d99f24a8549002e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '9ef729352e086d6037f4c34ba62068f70673b310'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cactus-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/cactus'
+          ref: '273c8f60afed40167ea7d5bf079c8c3ae1d2b2cc'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_javascript-0.10.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-lang/javascript'
+          ref: '2cf699d9c4cd4ac99924bb05bb7c07931eebfe1b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '395c9144f55c14a21fc1711384088320eec02e84'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glance-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/glance'
+          ref: '487f953a287ce07f9a9659c9d477c082090fad5a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gtempo-5.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jrstrunk/tempo'
+          ref: '7f6adbbc59d7a1636e4008ad7864c6a1a2a11de2'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cactus-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/cactus'
+          ref: 'ef43c16d0db65d0e555c3afec85ce567f6f3319b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glenv-0.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'custompro98/glenv'
+          ref: '6a39e8d7b594a72c0e568ff181212446e98a48f0'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: '31c18c256f26195455abf185ccc8905a998fc829'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  chomp-0.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/chomp'
+          ref: '51cda3a09a7672bdcbee7a44773bebb67356a13c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  bungibindies-1.1.4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'strawmelonjuice/bungibindies'
+          ref: '22954761e409e062ef70cb01815a74b793a33800'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.10:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '688fdbf5ce9cf7c210d8f3b65ffb5a819383ce9b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glearray-2.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lunagl/glearray'
+          ref: 'df4de721804219c17e872c2233a7ba6504d1e5ec'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  clad-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ryanmiville/clad'
+          ref: 'ffbe612c2196b443ab82e5005fc6cda1d510c317'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cactus-1.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/cactus'
+          ref: '94b265368db21203e6bf79547467e8760d410c51'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  party-1.0.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'RyanBrewer317/party'
+          ref: '46b617c65535809cd4a6a9bf2e64129a8557602a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  given-5.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'inoas/gleam-given'
+          ref: '0ba311978c428e4a134dc9d29529094b99add60b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  palabres-0.3.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/palabres'
+          ref: 'cae1a3f21d4b4276d8dee6074b30bd2d8e087837'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  toy-0.5.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Hackder/toy'
+          ref: '12ea6cec02d722da36a28dfae8d44ddbfb81cc97'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  nakai-0.11.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'aslilac/nakai'
+          ref: '69b97a4ea2b1a779b2608f4c27e63a1b6b00f3be'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleamy_structures-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'schurhammer/gleamy_structures'
+          ref: '6d8d32525419eed1a5e925dc86f3e963e4158316'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  globlin-2.0.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'apainintheneck/globlin'
+          ref: '309435fad8381fae297ff96bda526a66f67c4ddf'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleamy_structures-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'schurhammer/gleamy_structures'
+          ref: 'ae4c04af795667a1fc2e289e3d3031eb8131b247'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  file_streams-1.2.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/file_streams'
+          ref: 'd79c16d04a20737131dd8d8b45f0cbcfd92a9519'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  pprint-1.0.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/pprint'
+          ref: '12c124e8323aca4e7c49f5212bcb3c8274e36839'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.5.4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: 'bfd6da85f89eaea5b0448fd94fee5652a0a7335e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  clip-0.6.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'drewolson/clip'
+          ref: '02e9f2fc35c69ad60d149cdd62c8038a2129ec09'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.7:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '41c8fced319ca7e1f87d0882bf3d971548fdcc15'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  juno-1.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'massivefermion/juno'
+          ref: 'bdd234460b296457f140af3d11e7cc35d44870c8'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  bigdecimal-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'horvathandris/bigdecimal'
+          ref: '82556b4aa9ae732916e36a1a4e5407a08195d7da'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gxyz-0.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/gxyz'
+          ref: '4cdaad966cf55c4e2c7168335db1a917af7d8d93'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  dotenv_gleam-1.0.7:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Grubba27/dotenv_gleam'
+          ref: '8dc5469d763309a8665f757a5eadbed794380394'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: '99082dc421970974486e08330e1c2d309aa68eb7'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  xmb-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/xmb'
+          ref: '621b3b4c85fa2f2403a33f9fe8ee7677a1765326'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  javascript_mutable_reference-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/javascript-mutable-reference'
+          ref: 'f0186b52f25a2ea4b1ce7648e5d28d882434f785'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  lucide_lustre-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'dinkelspiel/lucide_lustre'
+          ref: 'ea3acb6baddf8e3b2c3a43f61d4267b00919b3c4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gtempo-6.1.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jrstrunk/tempo'
+          ref: '99eff059e93a7f5dd954e22a25fe8e11e204033b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  storail-3.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/storail'
+          ref: '05f749d77562dcf23093d56c18da53b825ffe245'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glen-2.2.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/glen'
+          ref: 'c456f2eb04ac5981965b1ab1f77c0e0a638b0170'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  clip-0.6.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'drewolson/clip'
+          ref: '41959cb54992c31d1cf3e319947bb5ca8130e5a9'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  splitter-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/splitter'
+          ref: 'b6a3eecae33f917ffe383f68a79ce392c1ed05ad'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleamgen-0.3.6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Brewingweasel/gleamgen'
+          ref: 'bca0648802288139fbb8db509002d5124d2d62b4'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  non_empty_list-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'giacomocavalieri/non_empty_list'
+          ref: '370b812b4282d6e82f14ea05d2b079d27086b133'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  qcheck-0.0.6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mooreryan/gleam_qcheck'
+          ref: 'c3698c3fda319f0207febdb3c9ad70d146f0cc3e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  humanise-1.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'SaphiraKai/humanise'
+          ref: '15cc22811941f3c7ed65516fadf01d7b89334a3d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  given-5.0.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'inoas/gleam-given'
+          ref: '8a6321a05a5061f6efff7a0b7e450e11bdf06326'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  bucket-1.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/bucket'
+          ref: '6f42c62f3461ee7484890751c3321d11272205a8'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gzlib-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'LilyRose2798/gzlib'
+          ref: 'de4ce1010173a94d407c22c75522cd08acfb145f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  esgleam-0.8.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Enderchief/esgleam'
+          ref: '3946ffe9fd43430556d0c3aff856a8f5f208f52d'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleither-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/gleither'
+          ref: '2d623d60fc2e9bb904603705ec60b7bf26c0a7fc'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  qcheck-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mooreryan/gleam_qcheck'
+          ref: '9f7879af48b4da620b154a986f93883101c35f5a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  webls-1.5.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'versecafe/webls'
+          ref: 'fdb85aac164c6a0909496471b434a6d0dbb8a5ba'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  dotenv_gleam-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Grubba27/dotenv_gleam'
+          ref: '8f4e55e732d237092468ecb1c2d918a1373ec7e5'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleamy_bench-0.6.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'schurhammer/gleamy_bench'
+          ref: '03e08dde65e86172e9b4280f0312e0edb8a2e116'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  plinth-0.4.6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Crowdhailer/plinth'
+          ref: 'd802c41ffa21246acdacf2e678bc7bee469e0090'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gleam_community_maths-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'gleam-community/maths'
+          ref: '127d0cb5207352bae60654c8eb5afacdb5dce3a1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  globlin_fs-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'apainintheneck/globlin_fs'
+          ref: 'ed4fca814461585bf20fd39d78ab95118b62f9a5'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gluid-1.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'titouancreach/gluid'
+          ref: 'cb02f310d0ab0a3284aae048a608bcfd3197a2ea'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  input-1.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bcpeinhardt/input'
+          ref: 'b1a1a9fa9617128251af26af18daaed882797785'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  ieee_float-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'richard-viney/ieee_float'
+          ref: '330c3cc5ff40b08feffd9f65f488fc926112d95b'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  party-1.0.3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'RyanBrewer317/party'
+          ref: '6b95f7917684433d4041eb21f259bf7d58bda137'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gtempo-7.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jrstrunk/tempo'
+          ref: 'c18ebc788b165c8edc80f2a4363dfed6ed38c1d2'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  html_lustre_converter-1.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/html-lustre-converter'
+          ref: '58546ef47f425a48f0be23d8816d0dec4cb90d50'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  globlin-2.0.2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'apainintheneck/globlin'
+          ref: '51b56cb7daf314f949cefb9745c7245d76f3f0d1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  based_sqlite-3.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'stndrs/based_sqlite'
+          ref: '0de5d4ef8575f556c97b9daaeccea069a722e3df'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  shine_tree-0.0.6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'shine-coders/shine_tree'
+          ref: '787017798543f4d2752a1cd505ba993de912ba21'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  cx-1.0.5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jasonprogrammer/cx'
+          ref: 'a8c01804020e10e2e2b1e855eaa2a6e2f0827572'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  gtempo-6.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'jrstrunk/tempo'
+          ref: 'b7bc24ef862ff81f3e981f721f230451f9845c40'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  qcheck-0.0.8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'mooreryan/gleam_qcheck'
+          ref: 'de78179203a4d3df06248530b3d7cf68c81f19e1'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  convert-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Billuc/convert'
+          ref: 'b3caec06b994daf1a5694c00547442642a16362e'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  go_over-3.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/go-over'
+          ref: 'ed63331e5487690abc59676a9b247843b333b549'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  efetch-2.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lv37/efetch'
+          ref: '4447b3eb8203fc79d4bb398e5e446637f2190866'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  go_over-2.4.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'bwireman/go-over'
+          ref: 'dd11ab5455aa31af66737c34f05f31fda60d4b8c'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  tulip-0.1.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'johnnymayodev/tulip'
+          ref: '4f194e7c56adddfee063e3d3293304029a17c83a'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  formal-2.2.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'lpil/formal'
+          ref: '55cc502735db9458eaaf338f8ce71eba0a8b8752'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  based-2.0.0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'stndrs/based'
+          ref: '524efa9d097b47cef2434ef49bfbfd6bc812caec'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  grille_pain-1.0.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'ghivert/grille-pain'
+          ref: '6a4f0ca569cf3f2990fc22e2948ab5e4e52c076f'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js
+
+  glen-2.2.1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: 'MystPi/glen'
+          ref: '138295ec880e81f448da370c0900725e157dc505'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+      - run: gleam test --target js

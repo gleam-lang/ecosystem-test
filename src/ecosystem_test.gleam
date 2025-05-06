@@ -11,17 +11,38 @@ import gleam/list
 import gleam/option.{type Option}
 import gleam/package_interface
 import gleam/result
+import gleam/string
 import gtabler
 import simplifile
 import tom
 
-// Mar 04, 2024
-const oldest = 1_709_568_875
+const config = Config(
+  // Mar 04, 2024
+  oldest: 1_709_568_875,
+  fetch_missing: False,
+  test_erlang: False,
+  test_javascript: True,
+  count: 256,
+  print_table: False,
+  create_workflow: True,
+)
+
+pub type Config {
+  Config(
+    oldest: Int,
+    count: Int,
+    test_erlang: Bool,
+    test_javascript: Bool,
+    fetch_missing: Bool,
+    print_table: Bool,
+    create_workflow: Bool,
+  )
+}
 
 pub fn main() -> Nil {
-  io.println("packages list")
   let assert Ok(token) = envoy.get("GITHUB_TOKEN")
   let assert Ok(request) = request.to("https://packages.gleam.run/api/packages")
+  io.print(".")
   let assert Ok(response) = httpc.send(request)
   let assert Ok(packages) =
     json.parse(
@@ -31,13 +52,86 @@ pub fn main() -> Nil {
   let releases =
     packages
     |> list.flat_map(get_releases(_, token))
+    |> list.sort(fn(a, b) { int.compare(b.downloads, a.downloads) })
+    |> list.filter(fn(release) {
+      case config.test_erlang, config.test_javascript {
+        True, True -> release.erlang || release.javascript
+        True, _ -> release.erlang
+        _, True -> release.javascript
+        _, _ -> False
+      }
+    })
+    |> list.take(config.count)
 
-  io.println("")
+  case config.print_table {
+    True -> print_table(releases)
+    False -> Nil
+  }
 
+  case config.create_workflow {
+    True -> create_workflow(releases)
+    False -> Nil
+  }
+
+  Nil
+}
+
+fn create_workflow(releases: List(Release)) -> Nil {
+  let workflow =
+    "
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      gleam-version:
+        description: 'Gleam version'
+        required: true
+        default: '1.10.0'
+
+jobs:
+"
+  let workflow =
+    list.fold(releases, workflow, fn(workflow, release) {
+      case release.github, release.sha {
+        option.Some(github), option.Some(sha) -> {
+          let workflow = workflow <> "
+  " <> release.package <> "-" <> release.version <> ":
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: '" <> github <> "'
+          ref: '" <> sha <> "'
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '27'
+          gleam-version: '1.10.0'
+          rebar3-version: '3'
+          elixir-version: '1'
+"
+          let workflow = case config.test_erlang && release.erlang {
+            False -> workflow
+            True -> workflow <> "      - run: gleam test --target erlang\n"
+          }
+          case config.test_javascript && release.javascript {
+            False -> workflow
+            True -> workflow <> "      - run: gleam test --target js\n"
+          }
+        }
+        _, _ -> workflow
+      }
+    })
+
+  let assert Ok(_) =
+    simplifile.write(".github/workflows/ecosystem-test.yml", workflow)
+
+  Nil
+}
+
+fn print_table(releases: List(Release)) -> Nil {
   let rows =
     releases
-    |> list.sort(fn(a, b) { int.compare(b.downloads, a.downloads) })
-    |> list.take(100)
     |> list.index_map(fn(release, i) {
       [
         int.to_string(i + 1),
@@ -54,12 +148,13 @@ pub fn main() -> Nil {
     cell_color: function.identity,
   )
   |> gtabler.print_table(["", "Package", "Version", "Downloads"], rows)
-  // |> io.println
-
-  Nil
+  |> io.println
 }
 
-fn get_tags(package: ApiPackage, token: String) -> List(ApiTag) {
+fn get_github_and_tags(
+  package: ApiPackage,
+  token: String,
+) -> #(Option(String), List(ApiTag)) {
   case package.repository {
     option.Some("https://github.com/" <> github) -> {
       // TODO: follow redirects
@@ -70,32 +165,48 @@ fn get_tags(package: ApiPackage, token: String) -> List(ApiTag) {
         |> request.set_header("authorization", "Bearer " <> token)
         |> request.set_header("x-github-api-version", "2022-11-28")
 
-      io.println("github tags")
+      io.print(".")
       let assert Ok(response) = httpc.send(request)
 
       case response.status {
         200 -> {
           let assert Ok(tags) =
             json.parse(response.body, decode.list(api_tag_decoder()))
-          tags
+          #(option.Some(github), tags)
         }
         403 -> panic as "rate limited"
-        _ -> []
+        _ -> #(option.None, [])
       }
     }
-    option.Some(_) | option.None -> []
+    option.Some(_) | option.None -> #(option.None, [])
   }
 }
 
 fn get_releases(package: ApiPackage, token: String) -> List(Release) {
-  let ApiPackage(name:, repository: _, updated_at: _) = package
   let assert Ok(_) =
     simplifile.create_directory_all("packages/" <> package.name)
+  case config.fetch_missing {
+    True -> lookup_releases(package, token)
+    False -> get_releases_from_cache(package)
+  }
+}
 
-  io.println("packages endpoint")
+fn get_releases_from_cache(package: ApiPackage) -> List(Release) {
+  let path = "packages/" <> package.name
+  let assert Ok(files) = simplifile.read_directory(path)
+  let assert Ok(releases) =
+    list.try_map(files, fn(file) {
+      read_from_cache(package.name, string.drop_end(file, 5))
+    })
+  releases
+}
+
+fn lookup_releases(package: ApiPackage, token: String) -> List(Release) {
+  let ApiPackage(name:, repository: _, updated_at: _) = package
   let assert Ok(request) =
     request.to("https://packages.gleam.run/api/packages/" <> name)
 
+  io.print(".")
   let assert Ok(response) = httpc.send(request)
 
   case response.status {
@@ -112,7 +223,7 @@ fn get_releases(package: ApiPackage, token: String) -> List(Release) {
   // Find releases we don't have a file locally for yet
   let #(releases, missing_releases) =
     releases
-    |> list.filter(fn(release) { release.updated_at >= oldest })
+    |> list.filter(fn(release) { release.updated_at >= config.oldest })
     |> list.map(fn(release) {
       read_from_cache(package.name, release.version)
       |> result.replace_error(release)
@@ -123,7 +234,7 @@ fn get_releases(package: ApiPackage, token: String) -> List(Release) {
     // If there's no missing releases there's nothing more to do
     [] -> releases
     _ -> {
-      let tags = get_tags(package, token)
+      let #(github, tags) = get_github_and_tags(package, token)
 
       let releases =
         missing_releases
@@ -136,6 +247,7 @@ fn get_releases(package: ApiPackage, token: String) -> List(Release) {
           Ok(Release(
             package: package.name,
             version: r.version,
+            github:,
             sha:,
             downloads: r.downloads,
             erlang:,
@@ -177,10 +289,22 @@ fn toml_to_release(
       Ok(sha) -> option.Some(sha)
       Error(_) -> option.None
     }
+    let github = case tom.get_string(toml, ["github"]) {
+      Ok(github) -> option.Some(github)
+      Error(_) -> option.None
+    }
     use erlang <- result.try(tom.get_bool(toml, ["erlang"]))
     use javascript <- result.try(tom.get_bool(toml, ["javascript"]))
     use downloads <- result.try(tom.get_int(toml, ["downloads"]))
-    Ok(Release(package:, version:, sha:, downloads:, erlang:, javascript:))
+    Ok(Release(
+      package:,
+      version:,
+      github:,
+      sha:,
+      downloads:,
+      erlang:,
+      javascript:,
+    ))
   }
   |> result.replace_error(Nil)
 }
@@ -196,6 +320,10 @@ fn release_to_toml(release: Release) -> String {
     option.Some(sha) -> "sha = \"" <> sha <> "\"\n"
     option.None -> ""
   }
+  let toml = case release.github {
+    option.Some(github) -> toml <> "github = \"" <> github <> "\"\n"
+    option.None -> toml
+  }
 
   toml <> "erlang = " <> bool(release.erlang) <> "
 javascript = " <> bool(release.javascript) <> "
@@ -204,10 +332,10 @@ downloads = " <> int.to_string(release.downloads) <> "
 }
 
 fn determine_support(name: String, version: String) -> #(Bool, Bool) {
-  io.println("hexdocs")
   let url =
     "https://hexdocs.pm/" <> name <> "/" <> version <> "/package-interface.json"
   let assert Ok(request) = request.to(url)
+  io.print(".")
   let assert Ok(response) = httpc.send(request)
 
   case response.status {
@@ -236,6 +364,7 @@ type Release {
   Release(
     package: String,
     version: String,
+    github: Option(String),
     sha: Option(String),
     downloads: Int,
     erlang: Bool,
