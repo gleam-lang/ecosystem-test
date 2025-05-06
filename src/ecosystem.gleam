@@ -19,9 +19,11 @@ import tom
 const config = Config(
   // Mar 04, 2024
   oldest: 1_709_568_875,
+  // Delete `./packages` and set this to true to get new data.
   fetch_missing: False,
   test_erlang: False,
   test_javascript: True,
+  // 256 is the max that GitHub actions supports
   count: 256,
   print_table: False,
   create_workflow: True,
@@ -108,11 +110,14 @@ fn override(release: Release) -> Release {
     | Release(package: "palabres_wisp", ..) ->
       Release(..release, javascript: False, erlang: False)
 
+    // Tests hang forever
+    Release(package: "glen", ..) | Release(package: "repeatedly", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
     // No tests
     Release(package: "lucide_lustre", ..)
     | Release(package: "gleroglero", ..)
-    | Release(package: "vleam", ..)
-    | Release(package: "repeatedly", ..) ->
+    | Release(package: "vleam", ..) ->
       Release(..release, javascript: False, erlang: False)
 
     _ -> release
