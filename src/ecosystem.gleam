@@ -39,6 +39,55 @@ pub type Config {
   )
 }
 
+fn override(release: Release) -> Release {
+  case release {
+    // Outdated deps
+    Release(package: "gleam_http", version: "1." <> _, ..)
+    | Release(package: "gleam_http", version: "2." <> _, ..)
+    | Release(package: "cors_builder", version: "2." <> _, ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // Erlang specific tests
+    Release(package: "nakai", version: "0." <> _, ..)
+    | Release(package: "nakai", version: "1." <> _, ..)
+    | Release(package: "shine_tree", version: "0." <> _, ..)
+    | Release(package: "bucket", version: "1." <> _, ..)
+    | Release(package: "based_sqlite", version: "3." <> _, ..)
+    | Release(package: "spinner", ..) -> Release(..release, javascript: False)
+
+    // Uses services in tests
+    Release(package: "cake", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // Uses node modules in tests
+    Release(package: "go_over", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // Broken
+    Release(package: "glenv", version: "0." <> _, ..)
+    | Release(package: "gtempo", version: "4." <> _, ..)
+    | Release(package: "cactus", version: "1.3.3", ..)
+    | Release(package: "party", version: "1.0.3", ..)
+    | Release(package: "clip", version: "0.6.1", ..)
+    | Release(package: "qcheck", version: "0.0.6", ..)
+    | Release(package: "humanise", version: "1.0.2", ..)
+    | Release(package: "jot", version: "1.0.1", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // Unsupported monorepo
+    Release(package: "parabres", ..) | Release(package: "parabres_wisp", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // No tests
+    Release(package: "lucide_lustre", ..)
+    | Release(package: "gleroglero", ..)
+    | Release(package: "repeatedly", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    _ -> release
+  }
+}
+
 pub fn main() -> Nil {
   let assert Ok(token) = envoy.get("GITHUB_TOKEN")
   let assert Ok(request) = request.to("https://packages.gleam.run/api/packages")
@@ -112,6 +161,13 @@ jobs:
           gleam-version: '1.10.0'
           rebar3-version: '3'
           elixir-version: '1'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 "
           let workflow = case config.test_erlang && release.erlang {
             False -> workflow
@@ -247,15 +303,17 @@ fn lookup_releases(package: ApiPackage, token: String) -> List(Release) {
             Error(_) -> option.None
           }
           let #(erlang, javascript) = determine_support(package.name, r.version)
-          Ok(Release(
-            package: package.name,
-            version: r.version,
-            github:,
-            sha:,
-            downloads: r.downloads,
-            erlang:,
-            javascript:,
-          ))
+          let release =
+            Release(
+              package: package.name,
+              version: r.version,
+              github:,
+              sha:,
+              downloads: r.downloads,
+              erlang:,
+              javascript:,
+            )
+          Ok(override(release))
         })
         |> list.map(fn(release) {
           let path = cache_path(release.package, release.version)
@@ -299,15 +357,17 @@ fn toml_to_release(
     use erlang <- result.try(tom.get_bool(toml, ["erlang"]))
     use javascript <- result.try(tom.get_bool(toml, ["javascript"]))
     use downloads <- result.try(tom.get_int(toml, ["downloads"]))
-    Ok(Release(
-      package:,
-      version:,
-      github:,
-      sha:,
-      downloads:,
-      erlang:,
-      javascript:,
-    ))
+    let release =
+      Release(
+        package:,
+        version:,
+        github:,
+        sha:,
+        downloads:,
+        erlang:,
+        javascript:,
+      )
+    Ok(override(release))
   }
   |> result.replace_error(Nil)
 }
