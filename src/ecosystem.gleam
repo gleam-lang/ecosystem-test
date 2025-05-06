@@ -79,7 +79,7 @@ pub fn main() -> Nil {
 fn create_workflow(releases: List(Release)) -> Nil {
   let workflow =
     "
-name: test
+name: ecosystem-test
 
 on:
   workflow_dispatch:
