@@ -70,8 +70,12 @@ fn override(release: Release) -> Release {
     Release(package: "cake", ..) ->
       Release(..release, javascript: False, erlang: False)
 
-    // Uses node modules in tests
+    // Uses python stuff in tests
     Release(package: "go_over", ..) ->
+      Release(..release, javascript: False, erlang: False)
+
+    // Uses node modules in tests
+    Release(package: "lenient_parse", ..) ->
       Release(..release, javascript: False, erlang: False)
 
     // Broken with older Gleam versions

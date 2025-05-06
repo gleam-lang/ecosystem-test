@@ -4895,13 +4895,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - run: gleam test --target js
 
-  lenient_parse-2_0_0:
+  glibsql-0_7_1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: 'JosephTLyons/lenient_parse'
-          ref: '54205f565d75fb2a039160eeba44ed3b7aa7b3f6'
+          repository: 'custompro98/glibsql'
+          ref: '9ef69b100acf70d81f8d1948809578b75f7cfbd3'
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '27'
@@ -4917,13 +4917,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - run: gleam test --target js
 
-  glibsql-0_7_1:
+  glen_node-0_0_2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: 'custompro98/glibsql'
-          ref: '9ef69b100acf70d81f8d1948809578b75f7cfbd3'
+          repository: 'Enderchief/glen_node'
+          ref: '45c6c4d138f0ec681038848613b71a37289e3d16'
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '27'
