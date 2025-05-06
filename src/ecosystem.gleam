@@ -45,21 +45,24 @@ fn override(release: Release) -> Release {
     Release(package: "gleam_http", version: "1." <> _, ..)
     | Release(package: "gleam_http", version: "2." <> _, ..)
     | Release(package: "gleam_http", version: "3." <> _, ..)
+    | Release(package: "actic_plugin_diagram", version: "0." <> _, ..)
     | Release(package: "actic_plugin_diagram", version: "1." <> _, ..)
     | Release(package: "cors_builder", version: "2." <> _, ..) ->
       Release(..release, javascript: False, erlang: False)
 
     // Erlang specific tests
-    Release(package: "nakai", version: "0." <> _, ..)
+    Release(package: "gleam_crypto", ..)
+    | Release(package: "nakai", version: "0." <> _, ..)
     | Release(package: "nakai", version: "1." <> _, ..)
     | Release(package: "storail", version: "3." <> _, ..)
-    | Release(package: "cachemere", version: "0." <> _, ..)
+    | Release(package: "cachmere", version: "0." <> _, ..)
     | Release(package: "shine_tree", version: "0." <> _, ..)
     | Release(package: "worm", version: "1." <> _, ..)
     | Release(package: "bucket", version: "1." <> _, ..)
     | Release(package: "based_sqlite", version: "3." <> _, ..)
     | Release(package: "glance_printer", version: "1." <> _, ..)
     | Release(package: "glance_printer", version: "2." <> _, ..)
+    | Release(package: "json_typedef", version: "1." <> _, ..)
     | Release(package: "spinner", ..) -> Release(..release, javascript: False)
 
     // Uses services in tests
@@ -81,10 +84,12 @@ fn override(release: Release) -> Release {
     | Release(package: "cactus", version: "1.3.3", ..)
     | Release(package: "party", version: "1.0.3", ..)
     | Release(package: "clip", version: "0.6.1", ..)
-    | Release(package: "qcheck", version: "0.0.6", ..)
+    | Release(package: "qcheck", version: "0" <> _, ..)
     | Release(package: "humanise", version: "1.0.2", ..)
-    | Release(package: "glearray", version: "2.0.0", ..)
-    | Release(package: "handles", version: "4.0.0", ..)
+    | Release(package: "glearray", version: "0" <> _, ..)
+    | Release(package: "glearray", version: "1" <> _, ..)
+    | Release(package: "glearray", version: "2" <> _, ..)
+    | Release(package: "handles", version: "4" <> _, ..)
     | Release(package: "jot", version: "1.0.1", ..) ->
       Release(..release, javascript: False, erlang: False)
 
