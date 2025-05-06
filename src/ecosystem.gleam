@@ -45,13 +45,14 @@ fn override(release: Release) -> Release {
     Release(package: "gleam_http", version: "1." <> _, ..)
     | Release(package: "gleam_http", version: "2." <> _, ..)
     | Release(package: "gleam_http", version: "3." <> _, ..)
-    | Release(package: "actic_plugin_diagram", version: "0." <> _, ..)
-    | Release(package: "actic_plugin_diagram", version: "1." <> _, ..)
+    | Release(package: "arctic_plugin_diagram", version: "0." <> _, ..)
+    | Release(package: "arctic_plugin_diagram", version: "1." <> _, ..)
     | Release(package: "cors_builder", version: "2." <> _, ..) ->
       Release(..release, javascript: False, erlang: False)
 
     // Erlang specific tests
     Release(package: "gleam_crypto", ..)
+    | Release(package: "wisp_flash", ..)
     | Release(package: "nakai", version: "0." <> _, ..)
     | Release(package: "nakai", version: "1." <> _, ..)
     | Release(package: "storail", version: "3." <> _, ..)
@@ -74,7 +75,8 @@ fn override(release: Release) -> Release {
       Release(..release, javascript: False, erlang: False)
 
     // Broken with older Gleam versions
-    Release(package: "gtempo", version: "5." <> _, ..) ->
+    Release(package: "gtempo", version: "5." <> _, ..)
+    | Release(package: "gtempo", version: "6." <> _, ..) ->
       Release(..release, javascript: False, erlang: False)
 
     // Broken
@@ -90,7 +92,9 @@ fn override(release: Release) -> Release {
     | Release(package: "glearray", version: "1" <> _, ..)
     | Release(package: "glearray", version: "2" <> _, ..)
     | Release(package: "handles", version: "4" <> _, ..)
-    | Release(package: "jot", version: "1.0.1", ..) ->
+    | Release(package: "jot", version: "1." <> _, ..)
+    | Release(package: "jot", version: "2." <> _, ..)
+    | Release(package: "jot", version: "3." <> _, ..) ->
       Release(..release, javascript: False, erlang: False)
 
     // Unsupported monorepo
