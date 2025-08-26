@@ -168,11 +168,6 @@ name: ecosystem-test
 
 on:
   workflow_dispatch:
-    inputs:
-      gleam-version:
-        description: 'Gleam version'
-        required: true
-        default: 'nightly'
 
 jobs:
 "
@@ -194,7 +189,7 @@ jobs:
       - uses: erlef/setup-beam@v1
         with:
           otp-version: '28'
-          gleam-version: '${{ github.event.inputs.version }}'
+          gleam-version: nightly
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
