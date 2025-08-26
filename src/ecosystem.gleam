@@ -172,7 +172,7 @@ on:
       gleam-version:
         description: 'Gleam version'
         required: true
-        default: '1.10.0'
+        default: 'nightly'
 
 jobs:
 "
@@ -193,8 +193,8 @@ jobs:
           ref: '" <> sha <> "'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4

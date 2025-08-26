@@ -7,7 +7,7 @@ on:
       gleam-version:
         description: 'Gleam version'
         required: true
-        default: '1.10.0'
+        default: 'nightly'
 
 jobs:
 
@@ -20,8 +20,8 @@ jobs:
           ref: '4f9062bc8b2902969b635c5189165733cc3eb479'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -42,8 +42,8 @@ jobs:
           ref: '0d0f2f082a2d90806c54565dac64e1b4a659a3d0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -64,8 +64,8 @@ jobs:
           ref: '903589335bf6afdfed4d4d834bf20a13246137c2'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -86,8 +86,8 @@ jobs:
           ref: '23b6678d8c938aba60308f63b7176d19725a7227'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -109,8 +109,8 @@ jobs:
           ref: '52d6757640d43cccf9f3671cdd0beebd1f76ee0c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -131,8 +131,8 @@ jobs:
           ref: '341a71049ad765f8788af497969efbb94aba0bab'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -154,8 +154,8 @@ jobs:
           ref: '63d6ff7f4e75b9095ae8b6e78cf423e742cadcb4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -176,8 +176,8 @@ jobs:
           ref: 'b4e43a4dedad9f7d72d470f9bdd28413fbab51eb'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -199,8 +199,8 @@ jobs:
           ref: 'efe70ef04ae57bca78344cd13ccf4e40eac3ed21'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -221,8 +221,8 @@ jobs:
           ref: '626186280303019bed34568a9536957ffbb64f55'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -244,8 +244,8 @@ jobs:
           ref: 'da4a909be4502ca103eb7d3ffcec4eb19a2a1010'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -267,8 +267,8 @@ jobs:
           ref: '37de8ee4fe7346f8c681fbbeda8d59dc12dcf036'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -290,8 +290,8 @@ jobs:
           ref: 'a31192b454ab259bf2cf0041756ee85e7063626e'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -313,8 +313,8 @@ jobs:
           ref: 'b083c0be62c7e4d6bbaad3882c54334bb5cd4e66'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -336,8 +336,8 @@ jobs:
           ref: 'e78ab70745dd7d0fbb7528aec80428d380a6dde0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -358,8 +358,8 @@ jobs:
           ref: '5eac5a71e3e61bd3d54fa8f5739d4b90158f5d00'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -381,8 +381,8 @@ jobs:
           ref: 'aa306a3fe78972a4b421204b81da72c31e6cc927'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -403,8 +403,8 @@ jobs:
           ref: 'b00c8b94a72f4189bdcba92c35677dd051de1b8f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -426,8 +426,8 @@ jobs:
           ref: '5153d97c9ac249e42c6d0d44cb11040b0904e9c5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -448,8 +448,8 @@ jobs:
           ref: '4d3493576b864f11e15d4105c2081373c5811904'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -470,8 +470,8 @@ jobs:
           ref: '7aba73d83c42763e1854dd4a0beb0f17fb8b4019'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -493,8 +493,8 @@ jobs:
           ref: '61f975feb570f4cb1eef956a63f4fce036f139bf'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -516,8 +516,8 @@ jobs:
           ref: '6bbd95b695e4fd6480a20618d32b69f4b56e44c6'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -539,8 +539,8 @@ jobs:
           ref: 'd092588b525ec9f646bb80e1ad535abcff8bdc75'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -562,8 +562,8 @@ jobs:
           ref: '58e789027d037ac1472a90c7ec46bb9dd8874989'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -584,8 +584,8 @@ jobs:
           ref: 'd8f046a674197b41e409fec0522a5f6d2d4c7a6d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -606,8 +606,8 @@ jobs:
           ref: '22cda6a44097e839d71e875172f1087d94dce296'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -628,8 +628,8 @@ jobs:
           ref: 'd63abec25e014aa8294bd166536dd65a592dea8d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -650,8 +650,8 @@ jobs:
           ref: 'b1147ccad38ac370746c07961a964cb96d19e3a1'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -673,8 +673,8 @@ jobs:
           ref: 'cbefa95865ccf06613cfede1369ecc11702d300b'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -696,8 +696,8 @@ jobs:
           ref: '2a09507e6cacbdc8127c27cdd88f238fd348870d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -719,8 +719,8 @@ jobs:
           ref: '4b0de739762e0afffd32e0fe7277f227d9cba057'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -742,8 +742,8 @@ jobs:
           ref: '2ec12fb76d5b2141d48eab42cd14174abfe861f8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -765,8 +765,8 @@ jobs:
           ref: 'cac3386eb2c390c6762f5bdbd1135b3650826b35'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -787,8 +787,8 @@ jobs:
           ref: '85dc64e5a12046a19ab76c43f295e6a0e4c34dd1'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -809,8 +809,8 @@ jobs:
           ref: '8b215de8843fd1ded191a2eb0b50c84a71ef61ca'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -832,8 +832,8 @@ jobs:
           ref: '5193b3ebfd294527f873a24428460f5eb7e87ad4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -854,8 +854,8 @@ jobs:
           ref: '925f71b6c24a936a2636d6ea247f59b95531b3a9'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -876,8 +876,8 @@ jobs:
           ref: '5406e7e29ae2d7a751143ce686747d28e793e71e'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -899,8 +899,8 @@ jobs:
           ref: '81e96f642a5e3a771ea7834a352ad330f8a31945'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -921,8 +921,8 @@ jobs:
           ref: 'a5986253049354a78da5e64e2e52b04e39aff770'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -943,8 +943,8 @@ jobs:
           ref: '4dcfceb547282119a15d2460a9941420a4ca2b04'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -965,8 +965,8 @@ jobs:
           ref: 'dce25150f55607dccd6dec03f6a4857baaf8da46'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -987,8 +987,8 @@ jobs:
           ref: '6ef2e49363bb8518139fce923c49f1eae816127c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1010,8 +1010,8 @@ jobs:
           ref: '92d397d82d3e0b91ef69b4de6aa8a4ce8bcf3011'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1032,8 +1032,8 @@ jobs:
           ref: '7355a7a3d3163908fd1699ad09475882bcebb254'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1054,8 +1054,8 @@ jobs:
           ref: 'a618564f769999c88f1cba237400c2fa38a359d3'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1076,8 +1076,8 @@ jobs:
           ref: '7415ddb8d4be08716cb4ba217852fdbab8c8af33'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1098,8 +1098,8 @@ jobs:
           ref: '928f8fb7f6d8c46ebb42c0f71b654afb19a1607e'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1121,8 +1121,8 @@ jobs:
           ref: '367ccaad18d4d303c433da90682c5b1b14d1714e'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1144,8 +1144,8 @@ jobs:
           ref: 'dab62583d98a98649c1b031e4ea399e8e1051290'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1166,8 +1166,8 @@ jobs:
           ref: '6aa804fb63b67e1564f0f33f43ec68eddd284194'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1188,8 +1188,8 @@ jobs:
           ref: '9dafab3ecd582a35035cb05afe40c8f9889a64a7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1210,8 +1210,8 @@ jobs:
           ref: '330a3cc3c7bad3ba1171a5aa11d5451a6ee18278'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1233,8 +1233,8 @@ jobs:
           ref: '3d1afa8f8802cbb7a7a73fe5da1d60face1e08a8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1255,8 +1255,8 @@ jobs:
           ref: '598bc1ee020de0e5a1a3fc6f2640e2ee629116fa'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1277,8 +1277,8 @@ jobs:
           ref: 'f373ab73f0743c48b491f0e48e4ea379e3a3c37a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1299,8 +1299,8 @@ jobs:
           ref: 'e0efb5b64f026624133a2866439b5cb39e28ab48'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1321,8 +1321,8 @@ jobs:
           ref: '56ef55c8e3be6f45b5a441609ffa993c8a7b223a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1343,8 +1343,8 @@ jobs:
           ref: '48c276b8c7be319bca8a5330de1c7fd4ec9b953c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1366,8 +1366,8 @@ jobs:
           ref: 'c55e9baff094d67a2e78e45e1f32dd4c5bd696bc'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1389,8 +1389,8 @@ jobs:
           ref: 'ef3c676d46621a11985ad39cb472614380aa7841'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1411,8 +1411,8 @@ jobs:
           ref: '52f0d6dd0f09ca91f265e6b4172595402fd60616'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1433,8 +1433,8 @@ jobs:
           ref: 'e20cf17a68d3a24bab934d2def8a2c77a8f4f1f6'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1456,8 +1456,8 @@ jobs:
           ref: '2af06912a587b0411111d51660b98f7f57d6afdb'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1479,8 +1479,8 @@ jobs:
           ref: 'bfc0741eae6198fe0902bb2ee409bacb0da89709'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1502,8 +1502,8 @@ jobs:
           ref: '2933eac6f06981dc3091561760761f2f666d0e74'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1525,8 +1525,8 @@ jobs:
           ref: '5c9cb23ec7d0893f4d3be4b2cc5afe1b43bb255d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1547,8 +1547,8 @@ jobs:
           ref: '32a35d1a5671b5dcffc5ce4db270b56f178aa61f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1569,8 +1569,8 @@ jobs:
           ref: 'd4fbd88e985e7c4ba36f3ac64d6804125046bd65'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1592,8 +1592,8 @@ jobs:
           ref: '760f8d7d315bf525917e7d7989b685a3dd08d98e'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1614,8 +1614,8 @@ jobs:
           ref: '3491309aac4cbf83eae306c5b766f300e1d1dcb0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1636,8 +1636,8 @@ jobs:
           ref: 'd00d66e1e28bc72e8a47a6267684cced0411e180'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1658,8 +1658,8 @@ jobs:
           ref: 'dee714fe1fc83ea65b0ef816fed01a850cf720ca'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1680,8 +1680,8 @@ jobs:
           ref: '99bfaa51b1f7c840d3f6376b9fb3933ba3a0945a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1703,8 +1703,8 @@ jobs:
           ref: 'a8f17d83935f9478885d93000928ae1c0eabf15f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1726,8 +1726,8 @@ jobs:
           ref: '15a7b4b8668ae381e74ca9d61e7b4b4e985fae3d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1748,8 +1748,8 @@ jobs:
           ref: '24fed1c61a73456c0c721836254a441017caf80c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1770,8 +1770,8 @@ jobs:
           ref: 'b870acee32f0d31c49879bcbde452993c7c83cc8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1792,8 +1792,8 @@ jobs:
           ref: '9fd5fe4f0245ce1526f9e673b6db0439c3f7bd76'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1814,8 +1814,8 @@ jobs:
           ref: '7bf4b3e1ad1486f4a56d1196b2b4ed98d1fb0787'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1836,8 +1836,8 @@ jobs:
           ref: 'fdc7e573640b1b87af493d7e863dc829106d2772'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1859,8 +1859,8 @@ jobs:
           ref: 'c339a9788fc514cad8cbd6b1e9b04b32d9e3e967'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1882,8 +1882,8 @@ jobs:
           ref: '4dc9a89c9f67c1faed539134c3d9852ccd379c76'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1904,8 +1904,8 @@ jobs:
           ref: '3440b9d95ab55ce63da4dc2dc8927e7d9a946c76'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1926,8 +1926,8 @@ jobs:
           ref: '16d90a1b80351b3d97e9737675b9fd34f490c187'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1948,8 +1948,8 @@ jobs:
           ref: 'd0328030e3492a036f48e1a9be0119d1c40b0fc7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1970,8 +1970,8 @@ jobs:
           ref: '8ee467de6510fb2bb9a76e75ebea6d75f90b62c3'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -1992,8 +1992,8 @@ jobs:
           ref: '21131e233ba8c96a6f1182d6c0c064d90c86f460'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2015,8 +2015,8 @@ jobs:
           ref: 'b77e53dde0b6e9042635c8455e57f0e7b89fe303'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2038,8 +2038,8 @@ jobs:
           ref: '49560bc51b7d458844a1d7943f5a41320b53feb5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2060,8 +2060,8 @@ jobs:
           ref: '61bc59154144480c8af9bd4eb1b6e6b1516c3151'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2082,8 +2082,8 @@ jobs:
           ref: 'f4b4242a865bec66620c32afe6c0e1150f96f818'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2104,8 +2104,8 @@ jobs:
           ref: '41e09e934ed5e57e937c5ce263454c4d9c05429f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2126,8 +2126,8 @@ jobs:
           ref: '84828722a4a97ab30e47b7aec1fe9b53b60af555'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2148,8 +2148,8 @@ jobs:
           ref: 'ede7bd01c996b08cce4cb032535a3516d2635ae8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2170,8 +2170,8 @@ jobs:
           ref: 'b617da1d359ce2331f5410c456302e5966e00489'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2193,8 +2193,8 @@ jobs:
           ref: '27ec4ffaacacd98202288d22472da0221727600a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2215,8 +2215,8 @@ jobs:
           ref: '3b808b94d480f0ccb0f972f04eb1e9d59ecee5c7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2237,8 +2237,8 @@ jobs:
           ref: 'cceaf8ddcdddc95283d6a4e115a87e3ca076c671'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2259,8 +2259,8 @@ jobs:
           ref: '4764177ecd1a818f4eba496d0a2af97f3c04a6b2'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2282,8 +2282,8 @@ jobs:
           ref: 'cad15517fe3ffc89ba9df496f96abcb250d9ec71'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2304,8 +2304,8 @@ jobs:
           ref: 'b57e9b3103968c7b6b1af21708b013e65cb36819'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2326,8 +2326,8 @@ jobs:
           ref: '4974a8fa0ad9862e07961adc5eea91e21630becc'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2349,8 +2349,8 @@ jobs:
           ref: 'f76e3a866bf641ec374068faf74e1cf754425f6c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2371,8 +2371,8 @@ jobs:
           ref: '7cc6ab2e4a2914f37e27e947f73bf812b1606713'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2394,8 +2394,8 @@ jobs:
           ref: 'ebce172d176414f323c9fbaea61d0797fd9280d5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2416,8 +2416,8 @@ jobs:
           ref: 'e15ca5c57d6ece79cd1d2a7c083c4ab95d8ce836'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2439,8 +2439,8 @@ jobs:
           ref: 'a71dc4eba88782b0656e50f165d98d66a7b38746'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2461,8 +2461,8 @@ jobs:
           ref: 'd6dfb6b06a6c8b43dc89c1334cdafe5a142bad89'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2483,8 +2483,8 @@ jobs:
           ref: '303c6839c9b3269eaf6488854dca3f9d476ad4a5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2505,8 +2505,8 @@ jobs:
           ref: '7db0577a453f5a3376334ed37d2b0d1dce726b46'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2527,8 +2527,8 @@ jobs:
           ref: '1c8c9ebe17284f52226cd7f67dd16614443c002c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2549,8 +2549,8 @@ jobs:
           ref: 'cc7515bb9e76a1db8df0e66d5d5218d68b5fe678'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2571,8 +2571,8 @@ jobs:
           ref: '34235f1f1c4f5082828ce34edac6c8b9d2bb98de'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2593,8 +2593,8 @@ jobs:
           ref: '6cff58298f8352d7691a66550a4dde387534cd0a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2616,8 +2616,8 @@ jobs:
           ref: '6038c438b2d355735e3e9432fad3f4945a397817'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2639,8 +2639,8 @@ jobs:
           ref: '8d13555958735d5d89014d5ff566c3c6f6af52b8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2661,8 +2661,8 @@ jobs:
           ref: '607fb6c3d8b8e9b7218d5ce171dcae93c0d31750'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2684,8 +2684,8 @@ jobs:
           ref: '03de66944b8b246a884f12bbe59e11ef77895407'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2706,8 +2706,8 @@ jobs:
           ref: 'f15d41b5087d286b4862e2d5dea5382961daef55'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2729,8 +2729,8 @@ jobs:
           ref: 'b26676d14b1ea21527f0adfe7b4e848675622703'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2751,8 +2751,8 @@ jobs:
           ref: 'bc1f1e0db8b9a94a49560903ca5c48f1bab43934'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2773,8 +2773,8 @@ jobs:
           ref: 'bbcf9517163abe960ef443191352ce91cee056d9'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2795,8 +2795,8 @@ jobs:
           ref: '168397ec512edf2efbb44f0d01ffb914c6398f5c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2818,8 +2818,8 @@ jobs:
           ref: '7bae00478801c6c47b8c2406d38f5c6b78cc1af2'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2840,8 +2840,8 @@ jobs:
           ref: 'c3c3328355f360a32c5af2a5599823d4117fb523'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2862,8 +2862,8 @@ jobs:
           ref: '491ec992676174a91fbfb8f1651f11202401361d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2884,8 +2884,8 @@ jobs:
           ref: '0295d850e376435c20344dac58d056d16b28446d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2907,8 +2907,8 @@ jobs:
           ref: '3d7b58ce2955ff192743535b879744f444abef7c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2930,8 +2930,8 @@ jobs:
           ref: 'af68eea62b0001dee8a0ff34bf8be0f2e3f99de4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2953,8 +2953,8 @@ jobs:
           ref: '866c588403304c7154a5f0aa371ab6c84c8c69da'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2975,8 +2975,8 @@ jobs:
           ref: '48990fe560f91f671e693b074c6ffd3530a86a4c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -2997,8 +2997,8 @@ jobs:
           ref: '99b5da646d0a19d7655611477300f787e57213b4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3020,8 +3020,8 @@ jobs:
           ref: '9da8a63cb3c6632f4c8b1ec9a40011952359665a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3042,8 +3042,8 @@ jobs:
           ref: '9661c6e352ebd5cb52cf31b73eb7513ba8bc8acd'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3064,8 +3064,8 @@ jobs:
           ref: '83d90a6f93944b7f520477f7977bad4b4cfa8bde'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3086,8 +3086,8 @@ jobs:
           ref: 'fb6330637206c2245b26c739539e6e6904b83f41'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3108,8 +3108,8 @@ jobs:
           ref: 'b25f62b793c1be2018d2b4e7fad3886019ba0f7c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3130,8 +3130,8 @@ jobs:
           ref: '5db138e7cc5ab05cb981362efcd92a7fd67df9d2'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3153,8 +3153,8 @@ jobs:
           ref: 'c7bafc1ad2f6adbe1b7711aa7fcb620987d5aa42'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3175,8 +3175,8 @@ jobs:
           ref: 'cfab297bd4890d1014f4c8629ce9f364fa35a24f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3197,8 +3197,8 @@ jobs:
           ref: 'a3cbbae246ee4d152f09901b4f914403eca95046'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3219,8 +3219,8 @@ jobs:
           ref: '2a35db1fa3f0439e71944b4861ec761630b4b9f0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3241,8 +3241,8 @@ jobs:
           ref: 'aaaef7f0de1aedbe70e2d0e3a95863b43d242165'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3263,8 +3263,8 @@ jobs:
           ref: '31490c81b0afe7d471762c843d9b12d47769aaa3'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3285,8 +3285,8 @@ jobs:
           ref: 'dd805cdc9ee59cbb02649709f68812c3445b917f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3308,8 +3308,8 @@ jobs:
           ref: 'f62444cf994bf24c5781231aeb1f5a2d19314011'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3330,8 +3330,8 @@ jobs:
           ref: '7a96c2bd6a0ca20ca9ccb072ef3f3a16684c5193'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3352,8 +3352,8 @@ jobs:
           ref: 'f72d9dccde58173d9759f31464db889a3315133f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3374,8 +3374,8 @@ jobs:
           ref: '24425b1e78d498287c1b73d8010be10a91511cb7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3397,8 +3397,8 @@ jobs:
           ref: 'a237504fd0989fa0a861f003ec5c5ea05a2243c7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3419,8 +3419,8 @@ jobs:
           ref: '752a1ead5f9279797da645179952061bf4631cfb'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3442,8 +3442,8 @@ jobs:
           ref: 'bc0711dc68d91c29ad04414a5e621a379511a026'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3465,8 +3465,8 @@ jobs:
           ref: '957dec8547d142bf4f8a9656eb462b976177175d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3488,8 +3488,8 @@ jobs:
           ref: 'b7424b049194091613e5d2dfdfc4b478996a669b'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3511,8 +3511,8 @@ jobs:
           ref: '104b24db07ad12b2bee6f13f71ffd641d65fc712'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3534,8 +3534,8 @@ jobs:
           ref: 'b517b98a578bc55d79ef5ac8133e3deebc5e7142'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3556,8 +3556,8 @@ jobs:
           ref: '20c60a953e10c826a32c74d1d0265f16c4e82ac5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3579,8 +3579,8 @@ jobs:
           ref: '7b0a02f89cbdaf22ab18d88309864b8fa5d96957'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3601,8 +3601,8 @@ jobs:
           ref: '6df1652bde855502156cad9c64cbc36ab9bac474'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3624,8 +3624,8 @@ jobs:
           ref: '6e8359b564d319d662d54d2ce26964644739a856'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3646,8 +3646,8 @@ jobs:
           ref: 'cef49444e73dd36bf3661933ab55409aa70a5b33'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3669,8 +3669,8 @@ jobs:
           ref: '4796dbbd4f12f1c446bf929338305bf03680a22d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3692,8 +3692,8 @@ jobs:
           ref: '247c57f89ca80d19c272cf08306b75b9b6f49b06'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3715,8 +3715,8 @@ jobs:
           ref: '1a6e37f24ebf11e415ad6a287c7e77384abdc193'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3738,8 +3738,8 @@ jobs:
           ref: '738df82391646045fdd5ed19404c0063e43ad48f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3760,8 +3760,8 @@ jobs:
           ref: '85b193571159e1958e15155127decbeb60cd8484'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3782,8 +3782,8 @@ jobs:
           ref: '1241bdd1103bf682f0787ea81ded870fe95811da'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3804,8 +3804,8 @@ jobs:
           ref: 'a9d1fe410339d89179cad1bdffa2f989d20cf96c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3827,8 +3827,8 @@ jobs:
           ref: 'c7164d74ea3078d001b8d4abd497c7807f9b8d03'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3849,8 +3849,8 @@ jobs:
           ref: '3e4f1b8d11d14b784483e6860a94c65d4a42d8a2'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3871,8 +3871,8 @@ jobs:
           ref: '5df54a811e978d55e49d927771bbbc05dc5c91ac'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3893,8 +3893,8 @@ jobs:
           ref: 'facdba1b5179f9b3bdea5134250268f9a7905310'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3915,8 +3915,8 @@ jobs:
           ref: 'ddca90cbe01d107ff69768fa877a4a18f0c24a3c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3937,8 +3937,8 @@ jobs:
           ref: 'e5998f6a2c9f89e9d09857496669330f2e05df6f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3959,8 +3959,8 @@ jobs:
           ref: '2b3e3fd21cee9aa72b295e45f6fbc783963eeec1'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -3982,8 +3982,8 @@ jobs:
           ref: '5bb535fd5318df7297d9fc550387bf983cd0041f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4004,8 +4004,8 @@ jobs:
           ref: 'a34b31ee69f090cecebd5a6d73c3aca453998cce'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4026,8 +4026,8 @@ jobs:
           ref: 'f33111329823e07529a75b132ef4afc0b591512b'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4048,8 +4048,8 @@ jobs:
           ref: 'fae69f69788bc7d893d1bd67cfdd239dcc6ba96d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4070,8 +4070,8 @@ jobs:
           ref: '63edbddef876b1fcd0e541b2d6377d46a2764fa0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4093,8 +4093,8 @@ jobs:
           ref: '4a0e5678ecd68feccd8a20d2f2b674b168fd0079'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4115,8 +4115,8 @@ jobs:
           ref: '80d245c7296884efc3bd3ad5743e9e8a05624bb5'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4138,8 +4138,8 @@ jobs:
           ref: '664fb694dad43329812b04cd4f2f6cad851a9bcf'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4160,8 +4160,8 @@ jobs:
           ref: '301ee9add80d38b3b8144ee9c3aca8f641812bef'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4183,8 +4183,8 @@ jobs:
           ref: '1e9d44319c11488f446bf5813352ebdd7a3212ef'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4205,8 +4205,8 @@ jobs:
           ref: '79c7b8380d1677ab01670d773345b06144bee64d'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4227,8 +4227,8 @@ jobs:
           ref: 'f06634181be3248abcf9e84f997b37f5db671605'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4249,8 +4249,8 @@ jobs:
           ref: '841a408a2e6b8ba33f01921665c1fd67c170f593'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4272,8 +4272,8 @@ jobs:
           ref: '4557d51805763095c07c55c6febadc440de401cb'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4294,8 +4294,8 @@ jobs:
           ref: 'a3c2938e72013c9f35ba8254fce074def4f3314c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4316,8 +4316,8 @@ jobs:
           ref: '53795cbde6e580260a3d8274eca3b45416a96a79'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4338,8 +4338,8 @@ jobs:
           ref: 'e0127e65187a7d379077236a1f8adf5f11a9ed01'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4361,8 +4361,8 @@ jobs:
           ref: '9c3c3dbd2f0143956ab6f7783793a00a33ac30c4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4384,8 +4384,8 @@ jobs:
           ref: 'd94dbd7023a825332c8aefdb29b6128b48fdd882'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4406,8 +4406,8 @@ jobs:
           ref: '8e63f5f73b7cf1e76f48d1c6c4ab1ca13a1d430a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4428,8 +4428,8 @@ jobs:
           ref: '171b61fade503c99f50ec822a0b7214c39e6065a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4450,8 +4450,8 @@ jobs:
           ref: '541de3d92618b8ffa4b2409b601c0c6f8bfd9a7c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4472,8 +4472,8 @@ jobs:
           ref: '6f295ee99e3eb2b0b87b55669803d252f50c29de'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4495,8 +4495,8 @@ jobs:
           ref: 'fa8c13938abb9ba35cb4b669931b986dae888a57'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4518,8 +4518,8 @@ jobs:
           ref: '1863cfc80172a2c89a97c938f85f406cae5436a6'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4540,8 +4540,8 @@ jobs:
           ref: '27b476f26cb8a3e7aa0711488236aeab03cb1351'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4562,8 +4562,8 @@ jobs:
           ref: 'ab33c89a07dad23159cfeca1ccefea1ead8c46d4'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4584,8 +4584,8 @@ jobs:
           ref: 'b2767f1cb85c446d3572e844ead2634713fd7488'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4606,8 +4606,8 @@ jobs:
           ref: '20176fe4876cf836d8e2e79a3e5c7a1300bf9829'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4629,8 +4629,8 @@ jobs:
           ref: '5bf1fc3d45cbb48f5014c3d8abdf6889d3d56613'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4651,8 +4651,8 @@ jobs:
           ref: '07eb2d491a664ed2e5f5d66ad26166299afbbc2c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4674,8 +4674,8 @@ jobs:
           ref: 'c2bf4cfa18847212943b6712e121fefe5fa98c40'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4696,8 +4696,8 @@ jobs:
           ref: 'c2fa1edec4de6c135a5965aec2696f0a23b2fd86'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4719,8 +4719,8 @@ jobs:
           ref: '85b42d71e1f4d143febd7b85bd249ed63e2442af'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4741,8 +4741,8 @@ jobs:
           ref: '2d46270c702fef1ffae53521cb6c806f1be789ea'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4763,8 +4763,8 @@ jobs:
           ref: 'b281a5c43eeeca9787eff58639380c1d5f7d7ba6'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4785,8 +4785,8 @@ jobs:
           ref: '451a0063be9dd63dd2cd0252a9f75bd7cbcd178f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4807,8 +4807,8 @@ jobs:
           ref: '6ee4726085624e53e3a10829efc95b5e25741206'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4830,8 +4830,8 @@ jobs:
           ref: 'bacdee5114ad689c274cc1fd9e8cf9a43fc00609'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4852,8 +4852,8 @@ jobs:
           ref: 'a4a07486be1244e2e1e5dc85a8f2e6ee79cc79fa'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4874,8 +4874,8 @@ jobs:
           ref: '5ff86eeb0342f5fa15f72c237826414f0a728e85'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4896,8 +4896,8 @@ jobs:
           ref: '54409dd2461aec15ea560bb0a6a7f5ef164570f8'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4918,8 +4918,8 @@ jobs:
           ref: '8349133498dbd595b82c783d8e11d530689eeb35'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4941,8 +4941,8 @@ jobs:
           ref: 'cf487ab0d80e9548ec568da3e5df8f964e02b2b3'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4964,8 +4964,8 @@ jobs:
           ref: 'a6198e6fffaee5e85d8c419e1768a84aa82afeb1'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -4986,8 +4986,8 @@ jobs:
           ref: '23a2636d36fb3b75862899afc68a087dccf6c12f'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5009,8 +5009,8 @@ jobs:
           ref: 'de6c53c3b05c5b66ca20c8319698104e029528f0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5031,8 +5031,8 @@ jobs:
           ref: 'eb393cfd58ffc56ede08f31458a38f9c82f9f027'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5053,8 +5053,8 @@ jobs:
           ref: 'b20bc28a5493bdd1766f366efc1e61a9b7ca10de'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5076,8 +5076,8 @@ jobs:
           ref: '7ceefc937a022fbdd4f2651957d7002e216659a3'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5098,8 +5098,8 @@ jobs:
           ref: '370a060299cc9aeca4b37c3a36ce392055599815'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5121,8 +5121,8 @@ jobs:
           ref: 'a4d489fec7c0c066fc01e3da05955d0d084f14b0'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5143,8 +5143,8 @@ jobs:
           ref: 'b7e3337fa367cd9806373fddc9409559bbaf851c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5165,8 +5165,8 @@ jobs:
           ref: 'dad9063b175676dc8eda2e54991ac6c64e9a874c'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5187,8 +5187,8 @@ jobs:
           ref: '615484bc5d55a302bc2bfd57b64981fd1ee146f7'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5209,8 +5209,8 @@ jobs:
           ref: 'ee4e1f12c8cd4b322526855471a2b72a1df74df6'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
@@ -5232,8 +5232,8 @@ jobs:
           ref: 'aff95e13f9d9ce398a5b3fdaddddb3eb6729ad1a'
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '27'
-          gleam-version: '1.10.0'
+          otp-version: '28'
+          gleam-version: '${{ github.event.inputs.version }}'
           rebar3-version: '3'
           elixir-version: '1'
       - uses: actions/setup-node@v4
