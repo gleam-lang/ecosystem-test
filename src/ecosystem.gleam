@@ -21,7 +21,7 @@ const config = Config(
   oldest: 1_709_568_875,
   // Delete `./packages` and set this to true to get new data.
   fetch_missing: False,
-  test_erlang: False,
+  test_erlang: True,
   test_javascript: True,
   // 256 is the max that GitHub actions supports
   count: 256,
